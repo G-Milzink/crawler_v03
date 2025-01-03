@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== EndOfSupply Web Service Description File ===== -->
+<!-- ================================================================== -->
+<!--
+   Web service agency: nedu 
+   Web service version: 1.0.0
+   Web service date: 23 May 2012
+
+   Copyright (C) nedu (2012). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ws="urn:nedu:edsn:service:endofsupply:1:standard" targetNamespace="urn:nedu:edsn:service:endofsupply:1:standard" xmlns:ccma1="urn:nedu:edsn:data:endofsupplyrequest:1:standard" xmlns:ccma2="urn:nedu:edsn:data:endofsupplyresponse:1:standard" xmlns:ccma3="urn:edsn:edsn:data:soapfault:1:standard" >
+<types>
+<xsd:schema>
+<xsd:import schemaLocation="EndOfSupplyRequest_1p0.xsd" namespace="urn:nedu:edsn:data:endofsupplyrequest:1:standard" />
+<xsd:import schemaLocation="EndOfSupplyResponse_1p0.xsd" namespace="urn:nedu:edsn:data:endofsupplyresponse:1:standard" />
+<xsd:import schemaLocation="SOAPFault_1p0.xsd" namespace="urn:edsn:edsn:data:soapfault:1:standard" />
+</xsd:schema>
+</types>
+<message name="EndOfSupplyRequestEnvelope">
+<part name="part1" element="ccma1:EndOfSupplyRequestEnvelope"/>
+</message>
+<message name="EndOfSupplyResponseEnvelope">
+<part name="part1" element="ccma2:EndOfSupplyResponseEnvelope"/>
+</message>
+<message name="SOAPFault">
+<part name="part1" element="ccma3:SOAPFault"/>
+</message>
+<portType name="EndOfSupplyPortType">
+<operation name="EndOfSupply">
+<input message="ws:EndOfSupplyRequestEnvelope"/>
+<output message="ws:EndOfSupplyResponseEnvelope"/>
+<fault name="SOAPFault" message="ws:SOAPFault"/>
+</operation>
+</portType>
+<binding name="EndOfSupplyBinding" type="ws:EndOfSupplyPortType">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="EndOfSupply">
+<soap:operation soapAction="urn:EndOfSupplyRequestEnvelope" style="document"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="SOAPFault">
+<soap:fault name="SOAPFault" use="literal"/>
+</fault>
+</operation>
+</binding>
+<service name="EndOfSupply">
+<port name="EndOfSupplyPort" binding="ws:EndOfSupplyBinding">
+<soap:address location="http://"/>
+</port>
+</service>
+</definitions>

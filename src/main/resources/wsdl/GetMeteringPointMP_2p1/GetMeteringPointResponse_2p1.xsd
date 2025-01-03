@@ -1,0 +1,2372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== GetMeteringPointResponseEnvelope XML Schema File ===== -->
+<!-- ================================================================== -->
+<!--
+   Schema agency: nedu 
+   Schema version: 2.1.0
+   Schema date: 31 March 2020
+
+   Copyright (C) nedu (2020). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<xsd:schema version="2p1" xmlns:ccma="urn:nedu:edsn:data:getmeteringpointresponse:2:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:ccts="urn:un:unece:uncefact:documentation:common:3:standard:CoreComponentsTechnicalSpecification:3" targetNamespace="urn:nedu:edsn:data:getmeteringpointresponse:2:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- ================================================================== -->
+<!-- ===== Element Declarations ===== -->
+<!-- ================================================================== -->
+<!-- ===== Root element ===== -->
+<!-- ================================================================== -->
+<xsd:element name="GetMeteringPointResponseEnvelope" type="ccma:GetMeteringPointResponseEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GetMeteringPointResponseEnvelope</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GetMeteringPointResponseEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!-- ================================================================== -->
+<!-- ===== Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GetMeteringPointResponseEnvelope</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GetMeteringPointResponseEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EDSNBusinessDocumentHeader"  type="ccma:GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Content"  type="ccma:GetMeteringPointResponseEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ContentHash" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.ContentHash</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ContentHash</ccts:DictionaryEntryName>
+<ccts:Definition>Hash calculation based on business document</ccts:Definition>
+<ccts:BusinessTermName>Hash-code berekening</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ConversationID" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.ConversationID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ConversationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify all document instances related to a specific business process resulting from an initial service request</ccts:Definition>
+<ccts:BusinessTermName>Conversatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CorrelationID" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.CorrelationID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CorrelationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the document instances related to a specific asynchronous process</ccts:Definition>
+<ccts:BusinessTermName>Correlatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CreationTimestamp"  type="ccma:GetMeteringPointResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.CreationTimestamp</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CreationTimestamp</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp when document was created</ccts:Definition>
+<ccts:BusinessTermName>Creatie datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DocumentID" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.DocumentID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.DocumentID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to uniquely identify the business document on a functional level</ccts:Definition>
+<ccts:BusinessTermName>Document ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExpiresAt" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.ExpiresAt</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ExpiresAt</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp indication the expiration of this request</ccts:Definition>
+<ccts:BusinessTermName>Uiterste geldigheidsdatum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MessageID"  type="ccma:GetMeteringPointResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.MessageID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.MessageID</ccts:DictionaryEntryName>
+<ccts:Definition>UUID voor het uniek identificeren van elke business document instantie. De UUID wordt uitgegeven door de infrastructuur.
+Deze identifier is verplicht.</ccts:Definition>
+<ccts:BusinessTermName>Bericht ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProcessTypeID" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.ProcessTypeID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ProcessTypeID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the process type where a document instance belongs to</ccts:Definition>
+<ccts:BusinessTermName>Procestype ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RepeatedRequest" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.RepeatedRequest</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.RepeatedRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Correlates message or service with all other messages and service calls related to the same business process</ccts:Definition>
+<ccts:BusinessTermName>Herhaling aanvraag</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TestRequest" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EDSNBusinessDocumentHeader.TestRequest</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.TestRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Indicates if this is a test request</ccts:Definition>
+<ccts:BusinessTermName>Testdocument</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Destination"  type="ccma:GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Destination</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Manifest" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Manifest</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Source"  type="ccma:GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Source</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Destination</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Receiver"  type="ccma:GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Receiver</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Service" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Service</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Receiver</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Receiver.Authority</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the receiving party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Receiver.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol ontvangende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ReceiverID"  type="ccma:GetMeteringPointResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Receiver.ReceiverID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ReceiverID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Service</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ServiceMethod" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Service.ServiceMethod</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Identifies a process within the service that processes on the business document</ccts:Definition>
+<ccts:BusinessTermName>Functionaliteit van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ServiceName" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Service.ServiceName</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceName</ccts:DictionaryEntryName>
+<ccts:Definition>Sender description of service to be carried out on the business document</ccts:Definition>
+<ccts:BusinessTermName>Naam van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Manifest ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Manifest</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="NumberofItems"  type="ccma:GetMeteringPointResponseEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Manifest.NumberofItems</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest.NumberofItems</ccts:DictionaryEntryName>
+<ccts:Definition>Number of associated items</ccts:Definition>
+<ccts:BusinessTermName>Aantal gerelateerde items</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ManifestItem" minOccurs="1" maxOccurs="unbounded" type="ccma:GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Description" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#ManifestItem.Description</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.Description</ccts:DictionaryEntryName>
+<ccts:Definition>Text description of the item</ccts:Definition>
+<ccts:BusinessTermName>Omschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LanguageCode" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#ManifestItem.LanguageCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.LanguageCode</ccts:DictionaryEntryName>
+<ccts:Definition>ISO 639 language code of the item</ccts:Definition>
+<ccts:BusinessTermName>Taal-code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MimeTypeQualifierCode"  type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#ManifestItem.MimeTypeQualifierCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.MimeTypeQualifierCode</ccts:DictionaryEntryName>
+<ccts:Definition>MIME Media Types Code describing the content of the item</ccts:Definition>
+<ccts:BusinessTermName>MIME Media Type code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="UniformResourceIdentifier"  type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#ManifestItem.UniformResourceIdentifier</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.UniformResourceIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>URI of the item
+Identifier voor locatie en naam van een attachment</ccts:Definition>
+<ccts:BusinessTermName>URI</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Source ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Source</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Source.Authority</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the sending party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Source.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol zendende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SenderID"  type="ccma:GetMeteringPointResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Source.SenderID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.SenderID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:choice>
+<xsd:element name="Portaal_MeteringPoint"  type="ccma:GetMeteringPointResponseEnvelope_PC_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Rejection"  type="ccma:GetMeteringPointResponseEnvelope_PC_PR" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_Rejection</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek. Portaal_Rejection (Afwijzing) heeft een relatie met MeteringPoint (Aansluiting). Bevat geen informatie over MeteringPoint.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:GetMeteringPointResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint.EANID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Elke aansluiting op het net van de netbeheerder heeft een unieke EAN18 code conform de landelijke richtlijn (LDT1).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="AdministrativeStatusSmartMeter" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_AdministrativeStatusType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.AdministrativeStatusSmartMeter">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint.AdministrativeStatusSmartMeter</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.AdministrativeStatusSmartMeter</ccts:DictionaryEntryName>
+<ccts:Definition>Administratieve status slimme meter (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Administratieve status slimme meter</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridArea" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_GSRNEANCode" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.GridArea">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint.GridArea</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.GridArea</ccts:DictionaryEntryName>
+<ccts:Definition>Netgebied/GOS (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>Netgebied/GOS</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LocationDescription" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_LocationDescriptionType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.LocationDescription">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint.LocationDescription</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.LocationDescription</ccts:DictionaryEntryName>
+<ccts:Definition>Leveringsadres-locatieomschrijving (LDT3).</ccts:Definition>
+<ccts:BusinessTermName>Locatieomschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MarketSegment"  type="ccma:GetMeteringPointResponseEnvelope_MarketSegmentType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.MarketSegment">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint.MarketSegment</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.MarketSegment</ccts:DictionaryEntryName>
+<ccts:Definition>Verbruikssegment: ART, GVB, KVB (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Verbruikssegment</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProductType"  type="ccma:GetMeteringPointResponseEnvelope_EnergyProductType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.ProductType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint.ProductType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.ProductType</ccts:DictionaryEntryName>
+<ccts:Definition>Type van de aansluiting: Electriciteit of Gas (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Productsoort</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EDSN_AddressExtended" minOccurs="0" maxOccurs="unbounded" type="ccma:GetMeteringPointResponseEnvelope_Address" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.EDSN_AddressExtended">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint.EDSN_AddressExtended</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.EDSN_AddressExtended</ccts:DictionaryEntryName>
+<ccts:Definition>BAG, straatnaam, huisnummer, huisnummer-toevoeging, postcode, woonplaats, land, TNT perceelnummer, geografische coördinaten (CDT).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Leveringsadres uitgebreid</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ValidFromDate"  type="ccma:GetMeteringPointResponseEnvelope_Date" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.ValidFromDate">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint.ValidFromDate</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.ValidFromDate</ccts:DictionaryEntryName>
+<ccts:Definition>Begindatum van de aansluiting (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>Begindatum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridOperator_Company"  type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPCommercialCharacteristics"  type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MPCC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_EnergyMeter" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_Portaal_EnergyMeter" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_EnergyMeter">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_EnergyMeter</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_EnergyMeter</ccts:DictionaryEntryName>
+<ccts:Definition>Apparaat waarmee het energiegebruik geregistreerd kan worden.
+Toelichting: De Portaal_EnergyMeter bevat alle eigenschappen die voor het Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Energiemeter</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPPhysicalCharacteristics"  type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MPPhysicalCharacteristics" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke eigenschappen van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Fysieke eigenschappen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MeteringPointGroup" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MeteringPointGroup">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MeteringPointGroup</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MeteringPointGroup</ccts:DictionaryEntryName>
+<ccts:Definition>Groeperen aansluitingen.</ccts:Definition>
+<ccts:BusinessTermName>Groep aansluitingen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_GridOperator_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:GetMeteringPointResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridOperator_Company.ID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MeteringPointGroup">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MeteringPointGroup</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MeteringPointGroup</ccts:DictionaryEntryName>
+<ccts:Definition>Groeperen aansluitingen.</ccts:Definition>
+<ccts:BusinessTermName>Groep aansluitingen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="PAP" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup_PAP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#PAP</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>PAP</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Primair allocatiepunt</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SAP" minOccurs="0" maxOccurs="unbounded" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup_SAP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#SAP</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SAP</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Secundair allocatiepunt</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup_PAP ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup_PAP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#PAP</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>PAP</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Primair allocatiepunt</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:GetMeteringPointResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#PAP.EANID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>PAP.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Elke aansluiting op het net van de netbeheerder heeft een unieke EAN18 code conform de landelijke richtlijn (LDT1).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup_SAP ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MeteringPointGroup_SAP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#SAP</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SAP</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Secundair allocatiepunt</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:GetMeteringPointResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#SAP.EANID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SAP.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Elke aansluiting op het net van de netbeheerder heeft een unieke EAN18 code conform de landelijke richtlijn (LDT1).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MPCC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MPCC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="GridContractParty" minOccurs="0" maxOccurs="unbounded" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MPCC_GridContractParty" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridContractParty</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty</ccts:DictionaryEntryName>
+<ccts:Definition>Partij waarmee een schriftelijk vastgelegde overeenkomst bestaat. </ccts:Definition>
+<ccts:BusinessTermName>Contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BalanceSupplier_Company" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MPCC_BalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BalanceSupplier_Company</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BalanceResponsibleParty_Company" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MPCC_BalanceResponsibleParty_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceResponsibleParty_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BalanceResponsibleParty_Company</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: Degene verantwoordelijk voor het opstellen of te doen opstellen van energieprogramma&apos;s met betrekking tot de productie, het transport en het verbruik van elektriciteit ten behoeve van de netbeheerders en zich met inachtneming van de voorwaarden, bedoeld in artikel 26, te gedragen overeenkomstig die energieprogramma&apos;s.
+Gas: Degene verantwoordelijk voor het opstellen van een programma zoals bedoeld in artikel 17b, eerste of tweede lid, van de Gaswet.</ccts:Definition>
+<ccts:BusinessTermName>Programmaverantwoordelijke</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MeteringResponsibleParty_Company" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_MPCC_MeteringResponsibleParty_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MeteringResponsibleParty_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MeteringResponsibleParty_Company</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MeteringResponsibleParty_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Organisatorische eenheid die erkend is voor de uitvoering van de collectie, validatie en vaststelling van meterstanden en verbruiken voor grootverbruikaansluitingen.</ccts:Definition>
+<ccts:BusinessTermName>Meetverantwoordelijke</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MPCC_BalanceResponsibleParty_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MPCC_BalanceResponsibleParty_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceResponsibleParty_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BalanceResponsibleParty_Company</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: Degene verantwoordelijk voor het opstellen of te doen opstellen van energieprogramma&apos;s met betrekking tot de productie, het transport en het verbruik van elektriciteit ten behoeve van de netbeheerders en zich met inachtneming van de voorwaarden, bedoeld in artikel 26, te gedragen overeenkomstig die energieprogramma&apos;s.
+Gas: Degene verantwoordelijk voor het opstellen van een programma zoals bedoeld in artikel 17b, eerste of tweede lid, van de Gaswet.</ccts:Definition>
+<ccts:BusinessTermName>Programmaverantwoordelijke</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:GetMeteringPointResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BalanceResponsibleParty_Company.ID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MPCC_BalanceSupplier_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MPCC_BalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BalanceSupplier_Company</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:GetMeteringPointResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BalanceSupplier_Company.ID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MPCC_GridContractParty ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MPCC_GridContractParty" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridContractParty</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty</ccts:DictionaryEntryName>
+<ccts:Definition>Partij waarmee een schriftelijk vastgelegde overeenkomst bestaat. </ccts:Definition>
+<ccts:BusinessTermName>Contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Initials" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_InitialsType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty.Initials">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridContractParty.Initials</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty.Initials</ccts:DictionaryEntryName>
+<ccts:Definition>Initialen. Max. 5 karakters (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Initialen contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Surname" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_SurnameType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty.Surname">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridContractParty.Surname</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty.Surname</ccts:DictionaryEntryName>
+<ccts:Definition>Achternaam. Max. 24 karakters (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Naam contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SurnamePrefix" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_SurnamePrefixType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty.SurnamePrefix">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridContractParty.SurnamePrefix</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty.SurnamePrefix</ccts:DictionaryEntryName>
+<ccts:Definition>Tussenvoegsel. Max. 4 karakters (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Tussenvoegsel contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MPCC_MeteringResponsibleParty_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MPCC_MeteringResponsibleParty_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MeteringResponsibleParty_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MeteringResponsibleParty_Company</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MeteringResponsibleParty_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Organisatorische eenheid die erkend is voor de uitvoering van de collectie, validatie en vaststelling van meterstanden en verbruiken voor grootverbruikaansluitingen.</ccts:Definition>
+<ccts:BusinessTermName>Meetverantwoordelijke</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:GetMeteringPointResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MeteringResponsibleParty_Company.ID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MeteringResponsibleParty_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_MPPhysicalCharacteristics ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_MPPhysicalCharacteristics" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke eigenschappen van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Fysieke eigenschappen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="AllocationMethod" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyAllocationMethodType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.AllocationMethod">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.AllocationMethod</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.AllocationMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Allocatie methode van de aansluiting (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Allocatiemethode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CapTarCode" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_GLNEANCode" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.CapTarCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.CapTarCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.CapTarCode</ccts:DictionaryEntryName>
+<ccts:Definition>Tariefcode (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>Capaciteitstariefcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContractedCapacity" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Amount" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.ContractedCapacity">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.ContractedCapacity</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.ContractedCapacity</ccts:DictionaryEntryName>
+<ccts:Definition>Grootverbruik: capaciteit van de aansluiting (LDT3).</ccts:Definition>
+<ccts:BusinessTermName>Contractcapaciteit</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EnergyDeliveryStatus"  type="ccma:GetMeteringPointResponseEnvelope_EnergyDeliveryStatusType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.EnergyDeliveryStatus">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.EnergyDeliveryStatus</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EnergyDeliveryStatus</ccts:DictionaryEntryName>
+<ccts:Definition>Leveringstatus actief of niet actief (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Leveringsstatus</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EnergyFlowDirection" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyFlowDirectionType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.EnergyFlowDirection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.EnergyFlowDirection</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EnergyFlowDirection</ccts:DictionaryEntryName>
+<ccts:Definition>Leveringsrichting van de energie (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Leveringsrichting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="InvoiceMonth" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_InvoiceMonthType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.InvoiceMonth">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.InvoiceMonth</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.InvoiceMonth</ccts:DictionaryEntryName>
+<ccts:Definition>Factuurmaand (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Afrekenmaand</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MaxConsumption" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Amount" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.MaxConsumption">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.MaxConsumption</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.MaxConsumption</ccts:DictionaryEntryName>
+<ccts:Definition>Hoogste gasafname in m3(n;35,17)/uur van een telemetriegrootverbruiker in een uur gedurende de drie recentste volledig verstreken wintermaanden (december, januari en februari) (LDT3).</ccts:Definition>
+<ccts:BusinessTermName>Maxverbruik</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MeteringMethod"  type="ccma:GetMeteringPointResponseEnvelope_EnergyMeteringMethodType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.MeteringMethod">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.MeteringMethod</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.MeteringMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Meetmethode: maandelijks, jaarlijks, slim, telemetrie etc. (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Wijze van bemeting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PhysicalCapacity" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_PhysicalCapacityType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.PhysicalCapacity">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.PhysicalCapacity</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.PhysicalCapacity</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke capaciteit van de aansluiting. Minimale lengte 1 karakter, maximale lengte 10 karakters (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Fysieke capaciteit</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PhysicalStatus"  type="ccma:GetMeteringPointResponseEnvelope_EnergyConnectionPhysicalStatusType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.PhysicalStatus">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.PhysicalStatus</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.PhysicalStatus</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke status van de aansluiting: In aanleg, in bedrijf, etc. (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Fysieke status</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProfileCategory" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyUsageProfileType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.ProfileCategory">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.ProfileCategory</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.ProfileCategory</ccts:DictionaryEntryName>
+<ccts:Definition>Eén van de categorieën volgens paragraaf 2 van bijlage 15 van de Meetcode, waarbij netaansluitingen gecategoriseerd worden op basis van objectief vast te stellen kenmerken, zoals tariefcategorie, aansluitwaarde, gecontracteerd transportvermogen en bedrijfstijd en waarbij voor elk van deze categorieën een eigen, voor de desbetreffende categorie kenmerkende reeks profielfracties wordt vastgesteld (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Profielcategorie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Appliance" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Text" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.Appliance">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.Appliance</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.Appliance</ccts:DictionaryEntryName>
+<ccts:Definition>Gebruik van de aansluiting (LDT3).</ccts:Definition>
+<ccts:BusinessTermName>Gebruik aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ArticleSub" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_YesNoType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.ArticleSub">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.ArticleSub</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.ArticleSub</ccts:DictionaryEntryName>
+<ccts:Definition>Artikel 1 lid 2 of lid 3 kenmerk (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Artikel 1 lid 2 of lid 3 kenmerk</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DisconnectionMethod" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyConnectionDecommissionMethodType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.DisconnectionMethod">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.DisconnectionMethod</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.DisconnectionMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Wijze uit bedrijf (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Wijze uit bedrijf</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SDERegulation" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_YesNoType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.SDERegulation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.SDERegulation</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.SDERegulation</ccts:DictionaryEntryName>
+<ccts:Definition>SDE-regeling ja of nee (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>SDE-regeling</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Subtype" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyConnectionSubtypeType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.Subtype">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.Subtype</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.Subtype</ccts:DictionaryEntryName>
+<ccts:Definition>Soort aansluiting (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Soort aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SustainableEnergy" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_SustainableEnergyType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.SustainableEnergy">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.SustainableEnergy</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.SustainableEnergy</ccts:DictionaryEntryName>
+<ccts:Definition>Duurzame energie (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Duurzame energie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Switchability" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_SwitchabilityType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.Switchability">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.Switchability</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.Switchability</ccts:DictionaryEntryName>
+<ccts:Definition>Mogelijkheid tot switchen van de aansluiting (LDT2)</ccts:Definition>
+<ccts:BusinessTermName>Schakelbaarheid</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EAEnergyConsumptionNettedOffPeak" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.EAEnergyConsumptionNettedOffPeak</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EAEnergyConsumptionNettedOffPeak</ccts:DictionaryEntryName>
+<ccts:Definition>De verwachte afname elektriciteit van een allocatiepunt van het net (laag tarief) bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJA Laag Tarief) (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>SJA laag tarief</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EAEnergyConsumptionNettedPeak" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.EAEnergyConsumptionNettedPeak</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EAEnergyConsumptionNettedPeak</ccts:DictionaryEntryName>
+<ccts:Definition>De verwachte afname elektriciteit van een allocatiepunt van het net (normaal tarief) bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJA Normaal Tarief), of het verwachte jaarverbruik gas bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJV) (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>SJA normaal tarief/SJV</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EAEnergyProductionNettedOffPeak" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.EAEnergyProductionNettedOffPeak</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EAEnergyProductionNettedOffPeak</ccts:DictionaryEntryName>
+<ccts:Definition>De verwachte invoeding elektriciteit van een allocatiepunt op het net (laag tarief) bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJI Laag tarief) (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>SJI laag tarief</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EAEnergyProductionNettedPeak" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MPPhysicalCharacteristics.EAEnergyProductionNettedPeak</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EAEnergyProductionNettedPeak</ccts:DictionaryEntryName>
+<ccts:Definition>De verwachte invoeding elektriciteit van een allocatiepunt op het net (normaal tarief) bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJI Normaal tarief) (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>SJI normaal tarief</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_Portaal_EnergyMeter ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_Portaal_EnergyMeter" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_EnergyMeter">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_EnergyMeter</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_EnergyMeter</ccts:DictionaryEntryName>
+<ccts:Definition>Apparaat waarmee het energiegebruik geregistreerd kan worden.
+Toelichting: De Portaal_EnergyMeter bevat alle eigenschappen die voor het Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Energiemeter</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="NrOfRegisters" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_NrOfRegistersType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_EnergyMeter.NrOfRegisters">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_EnergyMeter.NrOfRegisters</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_EnergyMeter.NrOfRegisters</ccts:DictionaryEntryName>
+<ccts:Definition>Aantal telwerken van de energiemeter (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Aantal telwerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ID" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyMeterIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_EnergyMeter.ID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_EnergyMeter.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Meternummer (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Meternummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TemperatureCorrection" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_YesNoType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_EnergyMeter.TemperatureCorrection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_EnergyMeter.TemperatureCorrection</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_EnergyMeter.TemperatureCorrection</ccts:DictionaryEntryName>
+<ccts:Definition>Temperatuurcorrectie indicatie van de energiemeter, ja of nee (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Temperatuurcorrectie indicatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Type" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyMeterCodeType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_EnergyMeter.Type">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_EnergyMeter.Type</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_EnergyMeter.Type</ccts:DictionaryEntryName>
+<ccts:Definition>Type van de energiemeter (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Type meter</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TechnicalCommunicationSM" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_CommunicationStatusType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_EnergyMeter.TechnicalCommunicationSM">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_EnergyMeter.TechnicalCommunicationSM</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_EnergyMeter.TechnicalCommunicationSM</ccts:DictionaryEntryName>
+<ccts:Definition>Status code voor de uitleesbaarheid van de slimme meter (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Uitleesbaarheid slimme meter</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Register" minOccurs="0" maxOccurs="unbounded" type="ccma:GetMeteringPointResponseEnvelope_PC_PMP_Portaal_EnergyMeter_Register" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Register">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Register</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Register</ccts:DictionaryEntryName>
+<ccts:Definition>Inrichting voor het omvatten en soms ook presenteren van aantalen en hoeveelheden.</ccts:Definition>
+<ccts:BusinessTermName>Telwerk</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PMP_Portaal_EnergyMeter_Register ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PMP_Portaal_EnergyMeter_Register" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Register">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Register</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Register</ccts:DictionaryEntryName>
+<ccts:Definition>Inrichting voor het omvatten en soms ook presenteren van aantalen en hoeveelheden.</ccts:Definition>
+<ccts:BusinessTermName>Telwerk</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_Identifier" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Register.ID">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Register.ID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Register.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Identificatie van het telwerk (LDT3).</ccts:Definition>
+<ccts:BusinessTermName>Telwerkidentificatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MeteringDirection" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyFlowDirectionType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Register.MeteringDirection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Register.MeteringDirection</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Register.MeteringDirection</ccts:DictionaryEntryName>
+<ccts:Definition>Meetrichting van het telwerk (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Meetrichting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MultiplicationFactor" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_MultiplicationFactorType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Register.MultiplicationFactor">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Register.MultiplicationFactor</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Register.MultiplicationFactor</ccts:DictionaryEntryName>
+<ccts:Definition>Het samenstel van alle correctiefactoren met betrekking tot de fysieke meting die nodig zijn om uit de tellerstanden de daadwerkelijke hoeveelheid met het net uitgewisselde energie te kunnen vaststellen (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>Vermenigvuldigingsfactor</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="NrOfDigits" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_NrOfDigitsType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Register.NrOfDigits">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Register.NrOfDigits</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Register.NrOfDigits</ccts:DictionaryEntryName>
+<ccts:Definition>Aantal telwielen van het telwerk (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Aantal telwielen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TariffType" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_EnergyTariffType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Register.TariffType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Register.TariffType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Register.TariffType</ccts:DictionaryEntryName>
+<ccts:Definition>Tariefzone van het telwerk (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Tariefzone</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PR ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PR" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_Rejection</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek. Portaal_Rejection (Afwijzing) heeft een relatie met MeteringPoint (Aansluiting). Bevat geen informatie over MeteringPoint.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Rejection" minOccurs="1" maxOccurs="unbounded" type="ccma:GetMeteringPointResponseEnvelope_RejectionPortaalType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection.Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_Rejection.Rejection</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection.Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek (CDT).</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_MeteringPoint"  type="ccma:GetMeteringPointResponseEnvelope_PC_PR_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint1</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PR_PMP ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PR_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint1</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:GetMeteringPointResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Portaal_MeteringPoint1.EANID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Elke aansluiting op het net van de netbeheerder heeft een unieke EAN18 code conform de landelijke richtlijn (LDT1).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridOperator_Company"  type="ccma:GetMeteringPointResponseEnvelope_PC_PR_PMP_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridOperator_Company1</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GetMeteringPointResponseEnvelope_PC_PR_PMP_GridOperator_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_PC_PR_PMP_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridOperator_Company1</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:GetMeteringPointResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GridOperator_Company1.ID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Business Data Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Address ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_Address" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address</ccts:DictionaryEntryName>
+<ccts:Definition>Datatype voor adres met alle velden.</ccts:Definition>
+<ccts:BusinessTermName>Adres</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="BAG" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_BAGType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.BAG">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.BAG</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.BAG</ccts:DictionaryEntryName>
+<ccts:Definition>BAG (Basisregistraties Adressen en Gebouwen) identificatie (CDT)</ccts:Definition>
+<ccts:BusinessTermName>Basisregistraties Adressen en Gebouwen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="StreetName" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_AddressText" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.StreetName">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.StreetName</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.StreetName</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string straatnaam, max. 24 karakters</ccts:Definition>
+<ccts:BusinessTermName>Straatnaam</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BuildingNr" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_BuildingNumber" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.BuildingNr">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.BuildingNr</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.BuildingNr</ccts:DictionaryEntryName>
+<ccts:Definition>Cijfer(s) (integer) huisnummer, max. 6 karakters</ccts:Definition>
+<ccts:BusinessTermName>Huisnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExBuildingNr" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_ExBuildingNr" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.ExBuildingNr">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.ExBuildingNr</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.ExBuildingNr</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string huisnummertoevoeging, max. 6 karakters</ccts:Definition>
+<ccts:BusinessTermName>Huisnummertoevoeging</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ZIPCode" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_ZIPCode" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.ZIPCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.ZIPCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.ZIPCode</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string postcode, max. 6 karakters</ccts:Definition>
+<ccts:BusinessTermName>Postcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CityName" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_AddressText" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.CityName">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.CityName</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.CityName</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst string woonplaats, max. 24 karakters</ccts:Definition>
+<ccts:BusinessTermName>Woonplaats</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Country" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_CountryCode" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.Country">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.Country</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.Country</ccts:DictionaryEntryName>
+<ccts:Definition>Landcode, 2 karakters (LDT1)</ccts:Definition>
+<ccts:BusinessTermName>Landcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EDSN_GeographicalCoordinate" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_GeographicalCoordinate" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.EDSN_GeographicalCoordinate">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.EDSN_GeographicalCoordinate</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.EDSN_GeographicalCoordinate</ccts:DictionaryEntryName>
+<ccts:Definition>Complex data type met de GPS-coördinaten voor de noorderbreedte en oosterlengte</ccts:Definition>
+<ccts:BusinessTermName>GPS-coördinaten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TNTID" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_TNTIDType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#Address.TNTID">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Address.TNTID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Address.TNTID</ccts:DictionaryEntryName>
+<ccts:Definition>TNT perceelnummer</ccts:Definition>
+<ccts:BusinessTermName>TNT perceelnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: AddressText ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_AddressText">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#AddressText</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>AddressText</ccts:DictionaryEntryName>
+<ccts:Definition>Straatnaam en Tekst string voor complex datatype Adres (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Adres</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="24"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: AdministrativeStatusType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_AdministrativeStatusType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#AdministrativeStatusType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>AdministrativeStatusType</ccts:DictionaryEntryName>
+<ccts:Definition>Code administratieve status slimme meter (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Administratieve status</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Amount ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_Amount">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Amount</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Amount</ccts:DictionaryEntryName>
+<ccts:Definition>Hoeveelheid (integer) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Hoeveelheid</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:integer">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: BAGIDType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_BAGIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BAGIDType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BAGIDType</ccts:DictionaryEntryName>
+<ccts:Definition>Uniek objectaanduiding binnen een gemeente, bestaande uit 16 cijfers (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Objectnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="16"/>
+<xsd:minLength value="1"/>
+<xsd:pattern value="[0-9]*"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: BAGType ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_BAGType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#BAGType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BAGType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BAGType</ccts:DictionaryEntryName>
+<ccts:Definition>BAG (Basisregistraties Adressen en Gebouwen). De BAG-identifier is verplicht. De BAG-identifier Verblijfsobject is een adresseerbaar object met een relatie tot een Pand. Pand-identifier is derhalve een optioneel attribuut.</ccts:Definition>
+<ccts:BusinessTermName>BAG</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="BAGID"  type="ccma:GetMeteringPointResponseEnvelope_BAGIDType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#BAGType.BAGID">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BAGType.BAGID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BAGType.BAGID</ccts:DictionaryEntryName>
+<ccts:Definition>BAG-identifier voor de drie adresseerbare objecttypen: Verblijfsobjecten, Ligplaatsen en Standplaatsen</ccts:Definition>
+<ccts:BusinessTermName>BAG-identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BAGBuildingID" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_BAGIDType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#BAGType.BAGBuildingID">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BAGType.BAGBuildingID</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BAGType.BAGBuildingID</ccts:DictionaryEntryName>
+<ccts:Definition>BAG-identifier voor Pand</ccts:Definition>
+<ccts:BusinessTermName>BAGPand-identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: BuildingNumber ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_BuildingNumber">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#BuildingNumber</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BuildingNumber</ccts:DictionaryEntryName>
+<ccts:Definition>Huisnummer voor complex datatype Adres (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Huisnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:integer">
+<xsd:maxInclusive value="99999"/>
+<xsd:minInclusive value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: CommunicationStatusType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_CommunicationStatusType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#CommunicationStatusType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>CommunicationStatusType</ccts:DictionaryEntryName>
+<ccts:Definition>Uitleesbaarheid slimme meter (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Uitleesbaarheid slimme meter</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: CountryCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_CountryCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#CountryCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>CountryCode</ccts:DictionaryEntryName>
+<ccts:Definition>Landcode (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Landcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="2"/>
+<xsd:minLength value="2"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Date ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_Date">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Date</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Date</ccts:DictionaryEntryName>
+<ccts:Definition>Datum (date) (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Datum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:date"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: DateTime ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#DateTime</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>DateTime</ccts:DictionaryEntryName>
+<ccts:Definition>Datum/tijd (dateTime) (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:dateTime"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyAllocationMethodType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyAllocationMethodType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyAllocationMethodType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyAllocationMethodType</ccts:DictionaryEntryName>
+<ccts:Definition>Code allocatiemethode (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code allocatiemethode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyAmountType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyAmountType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyAmountType</ccts:DictionaryEntryName>
+<ccts:Definition>Energie verbruik (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Energie verbruik</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:integer">
+<xsd:maxInclusive value="999999999999999"/>
+<xsd:minInclusive value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyConnectionDecommissionMethodType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyConnectionDecommissionMethodType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyConnectionDecommissionMethodType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyConnectionDecommissionMethodType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals ge&amp;#239;dentificeerd door de participerende NB&apos;s. Geen default: waarde moet expliciet opgegeven worden door de NB (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code wijze uit bedrijf</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyConnectionPhysicalStatusType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyConnectionPhysicalStatusType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyConnectionPhysicalStatusType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyConnectionPhysicalStatusType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals ge&amp;#239;dentificeerd door de participerende NB&apos;s. Indien geen waarde is opgegeven door de NB wordt default automatisch &apos;In aanleg&apos; gebruikt (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code fysieke status</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyConnectionSubtypeType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyConnectionSubtypeType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyConnectionSubtypeType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyConnectionSubtypeType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals momenteel in gebruik door het switchsysteem (verwerken PV-switch). Indien geen waarde is opgegeven door de NB wordt default automatisch &apos;Gewoon&apos; gebruikt (voor NRM-aansluiting) (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code soort aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyDeliveryStatusType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyDeliveryStatusType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyDeliveryStatusType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyDeliveryStatusType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals gedentificeerd door de participerende NB&apos;s. Indien geen fysieke status is opgegeven door de NB wordt default automatisch &apos;Inactief&apos; gebruikt (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code leveringstatus</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyFlowDirectionType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyFlowDirectionType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyFlowDirectionType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyFlowDirectionType</ccts:DictionaryEntryName>
+<ccts:Definition>Combinatie indien op de aansluiting naast consumptie (afname uit het net) tevens productie (invoeding op het net) optreedt. Indien geen waarde is opgegeven door de NB wordt default automatisch &lt;i&gt;Levering&lt;/i&gt; gebruikt. Toegestane waarden: LVR, TLV, CMB. Meetrichting per telwerk. Toegestane waarden: LVR, TLV (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code leveringsrichting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyMeterCodeType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyMeterCodeType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyMeterCodeType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyMeterCodeType</ccts:DictionaryEntryName>
+<ccts:Definition>Type meter (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code type meter</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyMeterIDType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyMeterIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyMeterIDType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyMeterIDType</ccts:DictionaryEntryName>
+<ccts:Definition>Meternummer (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Meternummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="70"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyMeteringMethodType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyMeteringMethodType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyMeteringMethodType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyMeteringMethodType</ccts:DictionaryEntryName>
+<ccts:Definition>Frequentie van bemeting. Geen default: waarde moet expliciet opgegeven worden door de NB (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code wijze van bemeten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyProductType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyProductType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyProductType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyProductType</ccts:DictionaryEntryName>
+<ccts:Definition>Code productsoort (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code productsoort</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyTariffType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyTariffType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyTariffType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyTariffType</ccts:DictionaryEntryName>
+<ccts:Definition>Normaal bij een enkel tarief. Normaal en laag bij dubbel tarief (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code tariefzone</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="3"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyUsageProfileType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_EnergyUsageProfileType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#EnergyUsageProfileType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyUsageProfileType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals momenteel in gebruik door het switchsysteem (uitwisseling van stamgegevens). Geen default: waarde moet expliciet opgegeven worden door de NB (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code profielcategorie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ExBuildingNr ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_ExBuildingNr">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#ExBuildingNr</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ExBuildingNr</ccts:DictionaryEntryName>
+<ccts:Definition>Huisnummertoevoeging voor complex datatype Adres (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Huisnummertoevoeging</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="6"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GeoCoordinateMeasureType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_GeoCoordinateMeasureType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GeoCoordinateMeasureType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GeoCoordinateMeasureType</ccts:DictionaryEntryName>
+<ccts:Definition>GPS/N-co&amp;#246;rdinaten, GPS/O-co&amp;#246;rdinaten, Geografische co&amp;#246;rdinaat type (LDT categorie-1).
+GPS/N-co&amp;#246;rdinaten Test</ccts:Definition>
+<ccts:BusinessTermName>Geografische coördinaat</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+<xsd:fractionDigits value="5"/>
+<xsd:maxInclusive value="99.99999"/>
+<xsd:minExclusive value="00.00001"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GeographicalCoordinate ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_GeographicalCoordinate" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#GeographicalCoordinate">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GeographicalCoordinate</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GeographicalCoordinate</ccts:DictionaryEntryName>
+<ccts:Definition>De GPS-coördinaten van de positie van deze aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>GPS-coördinaten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Latitude" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_GeoCoordinateMeasureType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#GeographicalCoordinate.Latitude">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GeographicalCoordinate.Latitude</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GeographicalCoordinate.Latitude</ccts:DictionaryEntryName>
+<ccts:Definition>De GPS noorderbreedte-coördinaten van de positie van deze aansluiting (LDT1)</ccts:Definition>
+<ccts:BusinessTermName>GPS/N-coördinaten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Longitude" minOccurs="0" maxOccurs="1" type="ccma:GetMeteringPointResponseEnvelope_GeoCoordinateMeasureType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#GeographicalCoordinate.Longitude">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GeographicalCoordinate.Longitude</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GeographicalCoordinate.Longitude</ccts:DictionaryEntryName>
+<ccts:Definition>De GPS oosterlengte-coördinaten van de positie van deze aansluiting (LDT1)</ccts:Definition>
+<ccts:BusinessTermName>GPS/O-coördinaten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GLNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GLNEANCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GLNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Location Number (GLN) conform de Europese Artikel Nummering (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Global Location Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="13"/>
+<xsd:pattern value="[0-9]{13}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GSRNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#GSRNEANCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GSRNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Service Relation Number (GSRN) conform de Europese Artikel Nummering (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Global Service Relation Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="18"/>
+<xsd:pattern value="[0-9]{18}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Identifier ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Identifier</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Identifier</ccts:DictionaryEntryName>
+<ccts:Definition>Identifier (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Indicator ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Indicator</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Indicator</ccts:DictionaryEntryName>
+<ccts:Definition>Indicator (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Indicator</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: InitialsType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_InitialsType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#InitialsType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>InitialsType</ccts:DictionaryEntryName>
+<ccts:Definition>Initialen. Max. 5 karakters (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Initialen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="5"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: InvoiceMonthType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_InvoiceMonthType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#InvoiceMonthType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>InvoiceMonthType</ccts:DictionaryEntryName>
+<ccts:Definition>Factuurmaand (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Afrekenmaand</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="2"/>
+<xsd:pattern value="[0-1][0-9]"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: LocationDescriptionType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_LocationDescriptionType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#LocationDescriptionType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>LocationDescriptionType</ccts:DictionaryEntryName>
+<ccts:Definition>Omschrijving locatie aansluiting (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Leveringsadres-locatieomschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="35"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MarketSegmentType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_MarketSegmentType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MarketSegmentType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MarketSegmentType</ccts:DictionaryEntryName>
+<ccts:Definition>De bestaande verbruiksegmenten in de (vrije) energiemarkt. Geen default: waarde moet expliciet opgegeven worden door de NB (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code verbruikssegment</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MultiplicationFactorType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_MultiplicationFactorType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#MultiplicationFactorType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MultiplicationFactorType</ccts:DictionaryEntryName>
+<ccts:Definition>Het samenstel van alle correctiefactoren met betrekking tot de fysieke meting die nodig zijn om uit de tellerstanden de daadwerkelijke hoeveelheid met het net uitgewisselde energie te kunnen vaststellen (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Factor vermenigvuldiging</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+<xsd:fractionDigits value="5"/>
+<xsd:maxInclusive value="999.99990"/>
+<xsd:minInclusive value="000.00001"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NrOfDigitsType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_NrOfDigitsType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#NrOfDigitsType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>NrOfDigitsType</ccts:DictionaryEntryName>
+<ccts:Definition>Het aantal telwielen van het betreffende telwerk van deze conventionele meter (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Aantal telwielen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:integer">
+<xsd:pattern value="[1-9]"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NrOfRegistersType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_NrOfRegistersType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#NrOfRegistersType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>NrOfRegistersType</ccts:DictionaryEntryName>
+<ccts:Definition>Het aantal telwerken van de betreffende meter (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Aantal telwerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:integer">
+<xsd:pattern value="[0-9]"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Numeric ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Numeric</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Numeric</ccts:DictionaryEntryName>
+<ccts:Definition>Nummer (getal) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Nummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: PhysicalCapacityType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_PhysicalCapacityType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#PhysicalCapacityType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>PhysicalCapacityType</ccts:DictionaryEntryName>
+<ccts:Definition>Code fysieke capaciteit (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Fysiek capaciteit</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: RejectionPortaalType ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="GetMeteringPointResponseEnvelope_RejectionPortaalType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#RejectionPortaalType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#RejectionPortaalType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType</ccts:DictionaryEntryName>
+<ccts:Definition>Datatype voor inhoudelijke afwijzingen.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzingen portaal</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="RejectionCode"  type="ccma:GetMeteringPointResponseEnvelope_RejectionReasonType" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#RejectionPortaalType.RejectionCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#RejectionPortaalType.RejectionCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType.RejectionCode</ccts:DictionaryEntryName>
+<ccts:Definition>Code van de reden van de afwijzing</ccts:Definition>
+<ccts:BusinessTermName>Code afwijsreden</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RejectionText" minOccurs="0" maxOccurs="1" type="xsd:string" sawsdl:modelReference="urn:edsn:edsn:lom:cdt:model:2:standard#RejectionPortaalType.RejectionText">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#RejectionPortaalType.RejectionText</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType.RejectionText</ccts:DictionaryEntryName>
+<ccts:Definition>Toelichting op de reden van afwijzing</ccts:Definition>
+<ccts:BusinessTermName>Toelichting afwijsreden</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: RejectionReasonType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_RejectionReasonType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#RejectionReasonType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionReasonType</ccts:DictionaryEntryName>
+<ccts:Definition>Code afwijsreden.</ccts:Definition>
+<ccts:BusinessTermName>Code afwijsreden</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SurnamePrefixType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_SurnamePrefixType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#SurnamePrefixType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SurnamePrefixType</ccts:DictionaryEntryName>
+<ccts:Definition>Tussenvoegsel. Max. 4 karakters (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Tussenvoegsel</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SurnameType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_SurnameType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#SurnameType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SurnameType</ccts:DictionaryEntryName>
+<ccts:Definition>Achternaam. Max. 24 karakters (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Achternaam</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="24"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SustainableEnergyType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_SustainableEnergyType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#SustainableEnergyType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SustainableEnergyType</ccts:DictionaryEntryName>
+<ccts:Definition>N.v.t. indien onbekend/gas, anders &apos;echte&apos; waarde. Indien geen waarde is opgegeven door de NB wordt default automatisch &lt;i&gt;Niet van toepassing&lt;/i&gt; gebruikt (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code duurzame energie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SwitchabilityType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_SwitchabilityType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#SwitchabilityType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SwitchabilityType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals gedentificeerd door de participerende NB&apos;s. Onder voorwaarden dan moeilijk switchbaar. Indien geen waarde is opgegeven door de NB wordt default de switchbaarheid automatisch bepaald op basis van het type aansluiting. KV kent alleen &apos;A&apos; en &apos;L&apos;. GV kent alles behalve &apos;L&apos; (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code switchbaarheid</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Text ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#Text</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Text</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: TNTIDType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_TNTIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#TNTIDType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>TNTIDType</ccts:DictionaryEntryName>
+<ccts:Definition>TNT perceelnummer (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>TNT perceelnummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="9"/>
+<xsd:minLength value="1"/>
+<xsd:pattern value="[0-9]*"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: YesNoType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_YesNoType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#YesNoType</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>YesNoType</ccts:DictionaryEntryName>
+<ccts:Definition>Code ja of nee (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Ja of nee</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ZIPCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="GetMeteringPointResponseEnvelope_ZIPCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:getmeteringpointresponse#ZIPCode</ccts:UniqueID>
+<ccts:VersionID>2.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ZIPCode</ccts:DictionaryEntryName>
+<ccts:Definition>Postcode voor complex datatype Adres (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Postcode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="6"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Business Code List Definitions ===== -->
+<!-- ================================================================== -->
+</xsd:schema>

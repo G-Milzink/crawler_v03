@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== NameChangeRequestEnvelope XML Schema File ===== -->
+<!-- ================================================================== -->
+<!--
+   Schema agency: nedu 
+   Schema version: 1.1.0
+   Schema date: 4 March 2020
+
+   Copyright (C) nedu (2020). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<xsd:schema version="1p1" xmlns:ccma="urn:nedu:edsn:data:namechangerequest:1:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:ccts="urn:un:unece:uncefact:documentation:common:3:standard:CoreComponentsTechnicalSpecification:3" targetNamespace="urn:nedu:edsn:data:namechangerequest:1:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- ================================================================== -->
+<!-- ===== Element Declarations ===== -->
+<!-- ================================================================== -->
+<!-- ===== Root element ===== -->
+<!-- ================================================================== -->
+<xsd:element name="NameChangeRequestEnvelope" type="ccma:NameChangeRequestEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#NameChangeRequestEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>NameChangeRequestEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!-- ================================================================== -->
+<!-- ===== Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#NameChangeRequestEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>NameChangeRequestEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EDSNBusinessDocumentHeader"  type="ccma:NameChangeRequestEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Content"  type="ccma:NameChangeRequestEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_EDSNBusinessDocumentHeader ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ContentHash" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.ContentHash</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ContentHash</ccts:DictionaryEntryName>
+<ccts:Definition>Hash calculation based on business document</ccts:Definition>
+<ccts:BusinessTermName>Hash-code berekening</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ConversationID" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.ConversationID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ConversationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify all document instances related to a specific business process resulting from an initial service request</ccts:Definition>
+<ccts:BusinessTermName>Conversatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CorrelationID" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.CorrelationID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CorrelationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the document instances related to a specific asynchronous process</ccts:Definition>
+<ccts:BusinessTermName>Correlatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CreationTimestamp"  type="ccma:NameChangeRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.CreationTimestamp</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CreationTimestamp</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp when document was created</ccts:Definition>
+<ccts:BusinessTermName>Creatie datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DocumentID" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.DocumentID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.DocumentID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to uniquely identify the business document on a functional level</ccts:Definition>
+<ccts:BusinessTermName>Document ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExpiresAt" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.ExpiresAt</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ExpiresAt</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp indication the expiration of this request</ccts:Definition>
+<ccts:BusinessTermName>Uiterste geldigheidsdatum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MessageID"  type="ccma:NameChangeRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.MessageID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.MessageID</ccts:DictionaryEntryName>
+<ccts:Definition>UUID voor het uniek identificeren van elke business document instantie. De UUID wordt uitgegeven door de infrastructuur.
+Deze identifier is verplicht.</ccts:Definition>
+<ccts:BusinessTermName>Bericht ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProcessTypeID" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.ProcessTypeID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ProcessTypeID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the process type where a document instance belongs to</ccts:Definition>
+<ccts:BusinessTermName>Procestype ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RepeatedRequest" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.RepeatedRequest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.RepeatedRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Correlates message or service with all other messages and service calls related to the same business process</ccts:Definition>
+<ccts:BusinessTermName>Herhaling aanvraag</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TestRequest" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#EDSNBusinessDocumentHeader.TestRequest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.TestRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Indicates if this is a test request</ccts:Definition>
+<ccts:BusinessTermName>Testdocument</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Destination"  type="ccma:NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Destination</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Manifest" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Source"  type="ccma:NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Source</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Destination</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Receiver"  type="ccma:NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Service" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Service</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Receiver.Authority</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the receiving party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Receiver.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol ontvangende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ReceiverID"  type="ccma:NameChangeRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Receiver.ReceiverID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ReceiverID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Service</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ServiceMethod" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Service.ServiceMethod</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Identifies a process within the service that processes on the business document</ccts:Definition>
+<ccts:BusinessTermName>Functionaliteit van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ServiceName" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Service.ServiceName</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceName</ccts:DictionaryEntryName>
+<ccts:Definition>Sender description of service to be carried out on the business document</ccts:Definition>
+<ccts:BusinessTermName>Naam van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Manifest ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="NumberofItems"  type="ccma:NameChangeRequestEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Manifest.NumberofItems</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest.NumberofItems</ccts:DictionaryEntryName>
+<ccts:Definition>Number of associated items</ccts:Definition>
+<ccts:BusinessTermName>Aantal gerelateerde items</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ManifestItem" minOccurs="1" maxOccurs="unbounded" type="ccma:NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Description" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#ManifestItem.Description</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.Description</ccts:DictionaryEntryName>
+<ccts:Definition>Text description of the item</ccts:Definition>
+<ccts:BusinessTermName>Omschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LanguageCode" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#ManifestItem.LanguageCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.LanguageCode</ccts:DictionaryEntryName>
+<ccts:Definition>ISO 639 language code of the item</ccts:Definition>
+<ccts:BusinessTermName>Taal-code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MimeTypeQualifierCode"  type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#ManifestItem.MimeTypeQualifierCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.MimeTypeQualifierCode</ccts:DictionaryEntryName>
+<ccts:Definition>MIME Media Types Code describing the content of the item</ccts:Definition>
+<ccts:BusinessTermName>MIME Media Type code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="UniformResourceIdentifier"  type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#ManifestItem.UniformResourceIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.UniformResourceIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>URI of the item
+Identifier voor locatie en naam van een attachment</ccts:Definition>
+<ccts:BusinessTermName>URI</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Source ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Source</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Source.Authority</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the sending party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Source.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol zendende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SenderID"  type="ccma:NameChangeRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Source.SenderID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.SenderID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_PC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Portaal_MeteringPoint"  type="ccma:NameChangeRequestEnvelope_PC_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_PC_PMP ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_PC_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:NameChangeRequestEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Portaal_MeteringPoint.EANID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Elke aansluiting op het net van de netbeheerder heeft een unieke EAN18 code conform de landelijke richtlijn (LDT1).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridOperator_Company"  type="ccma:NameChangeRequestEnvelope_PC_PMP_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPCommercialCharacteristics"  type="ccma:NameChangeRequestEnvelope_PC_PMP_MPCC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Mutation"  type="ccma:NameChangeRequestEnvelope_PC_PMP_PM" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Portaal_Mutation</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_PC_PMP_GridOperator_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_PC_PMP_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:NameChangeRequestEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GridOperator_Company.ID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_PC_PMP_MPCC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_PC_PMP_MPCC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="GridContractParty"  type="ccma:NameChangeRequestEnvelope_PC_PMP_MPCC_GridContractParty" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GridContractParty</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty</ccts:DictionaryEntryName>
+<ccts:Definition>Partij waarmee een schriftelijk vastgelegde overeenkomst bestaat. </ccts:Definition>
+<ccts:BusinessTermName>Contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BalanceSupplier_Company"  type="ccma:NameChangeRequestEnvelope_PC_PMP_MPCC_BalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#BalanceSupplier_Company</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_PC_PMP_MPCC_BalanceSupplier_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_PC_PMP_MPCC_BalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#BalanceSupplier_Company</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:NameChangeRequestEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#BalanceSupplier_Company.ID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_PC_PMP_MPCC_GridContractParty ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_PC_PMP_MPCC_GridContractParty" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GridContractParty</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty</ccts:DictionaryEntryName>
+<ccts:Definition>Partij waarmee een schriftelijk vastgelegde overeenkomst bestaat. </ccts:Definition>
+<ccts:BusinessTermName>Contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Initials" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_InitialsType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty.Initials">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GridContractParty.Initials</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty.Initials</ccts:DictionaryEntryName>
+<ccts:Definition>Initialen. Max. 5 karakters (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Initialen contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Surname"  type="ccma:NameChangeRequestEnvelope_SurnameType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty.Surname">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GridContractParty.Surname</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty.Surname</ccts:DictionaryEntryName>
+<ccts:Definition>Achternaam. Max. 24 karakters (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Naam contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SurnamePrefix" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_SurnamePrefixType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridContractParty.SurnamePrefix">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GridContractParty.SurnamePrefix</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridContractParty.SurnamePrefix</ccts:DictionaryEntryName>
+<ccts:Definition>Tussenvoegsel. Max. 4 karakters (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Tussenvoegsel contractant</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: NameChangeRequestEnvelope_PC_PMP_PM ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="NameChangeRequestEnvelope_PC_PMP_PM" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Portaal_Mutation</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ExternalReference" minOccurs="0" maxOccurs="1" type="ccma:NameChangeRequestEnvelope_ReferenceTextType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.ExternalReference">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Portaal_Mutation.ExternalReference</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.ExternalReference</ccts:DictionaryEntryName>
+<ccts:Definition>Eigen referentie van de initiërende marktpartij ter vereenvoudiging van zijn eigen interne procesgang. Max. 60 karakters (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Referentie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Business Data Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: DateTime ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#DateTime</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>DateTime</ccts:DictionaryEntryName>
+<ccts:Definition>Datum/tijd (dateTime) (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:dateTime"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GLNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GLNEANCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GLNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Location Number (GLN) conform de Europese Artikel Nummering (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Global Location Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="13"/>
+<xsd:pattern value="[0-9]{13}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GSRNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#GSRNEANCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GSRNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Service Relation Number (GSRN) conform de Europese Artikel Nummering (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Global Service Relation Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="18"/>
+<xsd:pattern value="[0-9]{18}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Identifier ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Identifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Identifier</ccts:DictionaryEntryName>
+<ccts:Definition>Identifier (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Indicator ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Indicator</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Indicator</ccts:DictionaryEntryName>
+<ccts:Definition>Indicator (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Indicator</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: InitialsType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_InitialsType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#InitialsType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>InitialsType</ccts:DictionaryEntryName>
+<ccts:Definition>Initialen. Max. 5 karakters (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Initialen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="5"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Numeric ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Numeric</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Numeric</ccts:DictionaryEntryName>
+<ccts:Definition>Nummer (getal) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Nummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ReferenceTextType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_ReferenceTextType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#ReferenceTextType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ReferenceTextType</ccts:DictionaryEntryName>
+<ccts:Definition>Referentie (string) (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Referentie tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="60"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SurnamePrefixType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_SurnamePrefixType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#SurnamePrefixType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SurnamePrefixType</ccts:DictionaryEntryName>
+<ccts:Definition>Tussenvoegsel. Max. 4 karakters (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Tussenvoegsel</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="4"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: SurnameType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_SurnameType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#SurnameType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>SurnameType</ccts:DictionaryEntryName>
+<ccts:Definition>Achternaam. Max. 24 karakters (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Achternaam</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="24"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Text ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="NameChangeRequestEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:namechangerequest#Text</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Text</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Business Code List Definitions ===== -->
+<!-- ================================================================== -->
+</xsd:schema>

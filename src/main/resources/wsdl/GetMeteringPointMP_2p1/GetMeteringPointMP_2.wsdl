@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== GetMeteringPointMP Web Service Description File ===== -->
+<!-- ================================================================== -->
+<!--
+   Web service agency: nedu 
+   Web service version: 2.0.1
+   Web service date: 31 March 2020
+
+   Copyright (C) nedu (2020). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ws="urn:nedu:edsn:service:getmeteringpointmp:2:standard" targetNamespace="urn:nedu:edsn:service:getmeteringpointmp:2:standard" xmlns:ccma1="urn:nedu:edsn:data:getmeteringpointrequest:1:standard" xmlns:ccma2="urn:nedu:edsn:data:getmeteringpointresponse:2:standard" xmlns:ccma3="urn:edsn:edsn:data:soapfault:1:standard" >
+<types>
+<xsd:schema>
+<xsd:import schemaLocation="GetMeteringPointRequest_1p2.xsd" namespace="urn:nedu:edsn:data:getmeteringpointrequest:1:standard" />
+<xsd:import schemaLocation="GetMeteringPointResponse_2p1.xsd" namespace="urn:nedu:edsn:data:getmeteringpointresponse:2:standard" />
+<xsd:import schemaLocation="SOAPFault_1p0.xsd" namespace="urn:edsn:edsn:data:soapfault:1:standard" />
+</xsd:schema>
+</types>
+<message name="GetMeteringPointRequestEnvelope">
+<part name="part1" element="ccma1:GetMeteringPointRequestEnvelope"/>
+</message>
+<message name="GetMeteringPointResponseEnvelope">
+<part name="part1" element="ccma2:GetMeteringPointResponseEnvelope"/>
+</message>
+<message name="SOAPFault">
+<part name="part1" element="ccma3:SOAPFault"/>
+</message>
+<portType name="GetMeteringPointMPPortType">
+<operation name="GetMeteringPoint">
+<input message="ws:GetMeteringPointRequestEnvelope"/>
+<output message="ws:GetMeteringPointResponseEnvelope"/>
+<fault name="SOAPFault" message="ws:SOAPFault"/>
+</operation>
+</portType>
+<binding name="GetMeteringPointMPBinding" type="ws:GetMeteringPointMPPortType">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="GetMeteringPoint">
+<soap:operation soapAction="urn:GetMeteringPoint" style="document"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="SOAPFault">
+<soap:fault name="SOAPFault" use="literal"/>
+</fault>
+</operation>
+</binding>
+<service name="GetMeteringPointMP">
+<port name="GetMeteringPointMPPort" binding="ws:GetMeteringPointMPBinding">
+<soap:address location="http://localhost:9000/b2b/synchroon/ResponderGetMeteringPointMPRespondingActivity"/>
+</port>
+</service>
+</definitions>

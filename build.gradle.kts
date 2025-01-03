@@ -10,7 +10,7 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(21)
+		languageVersion.set(JavaLanguageVersion.of(21))
 	}
 }
 
@@ -26,8 +26,17 @@ dependencies {
 	implementation("org.apache.cxf:cxf-rt-frontend-jaxws:3.5.6")
 	implementation("org.apache.cxf:cxf-rt-transports-http:3.5.6")
 	implementation("javax.xml.bind:jaxb-api:2.3.1")
+	implementation("jakarta.xml.bind:jakarta.xml.bind-api:3.0.1")
+	implementation("org.glassfish.jaxb:jaxb-runtime:3.0.2")
 }
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+// Configure the wsdl2java task
+tasks.named<com.github.bjornvester.wsdl2java.Wsdl2JavaTask>("wsdl2java") {
+	wsdl.set(file("src/main/resources/wsdl/SearchMeteringPoints_3p0/SearchMeteringPoints_3.wsdl"))
+	packageName.set("cmf.edsn.service.searchmeteringpoints._3.standard")
+	options.addAll("-XobjectFactory")
 }

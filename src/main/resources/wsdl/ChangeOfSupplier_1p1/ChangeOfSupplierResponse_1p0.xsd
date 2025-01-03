@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== ChangeOfSupplierResponseEnvelope XML Schema File ===== -->
+<!-- ================================================================== -->
+<!--
+   Schema agency: nedu 
+   Schema version: 1.0.0
+   Schema date: 23 May 2012
+
+   Copyright (C) nedu (2012). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<xsd:schema version="1p0" xmlns:ccma="urn:nedu:edsn:data:changeofsupplierresponse:1:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:ccts="urn:un:unece:uncefact:documentation:common:3:standard:CoreComponentsTechnicalSpecification:3" targetNamespace="urn:nedu:edsn:data:changeofsupplierresponse:1:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- ================================================================== -->
+<!-- ===== Element Declarations ===== -->
+<!-- ================================================================== -->
+<!-- ===== Root element ===== -->
+<!-- ================================================================== -->
+<xsd:element name="ChangeOfSupplierResponseEnvelope" type="ccma:ChangeOfSupplierResponseEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ChangeOfSupplierResponseEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ChangeOfSupplierResponseEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!-- ================================================================== -->
+<!-- ===== Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ChangeOfSupplierResponseEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ChangeOfSupplierResponseEnvelope</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EDSNBusinessDocumentHeader"  type="ccma:ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Content"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ContentHash" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.ContentHash</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ContentHash</ccts:DictionaryEntryName>
+<ccts:Definition>Hash calculation based on business document</ccts:Definition>
+<ccts:BusinessTermName>Hash-code berekening</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ConversationID" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.ConversationID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ConversationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify all document instances related to a specific business process resulting from an initial service request</ccts:Definition>
+<ccts:BusinessTermName>Conversatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CorrelationID" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.CorrelationID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CorrelationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the document instances related to a specific asynchronous process</ccts:Definition>
+<ccts:BusinessTermName>Correlatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CreationTimestamp"  type="ccma:ChangeOfSupplierResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.CreationTimestamp</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CreationTimestamp</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp when document was created</ccts:Definition>
+<ccts:BusinessTermName>Creatie datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DocumentID" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.DocumentID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.DocumentID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to uniquely identify the business document on a functional level</ccts:Definition>
+<ccts:BusinessTermName>Document ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExpiresAt" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.ExpiresAt</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ExpiresAt</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp indication the expiration of this request</ccts:Definition>
+<ccts:BusinessTermName>Uiterste geldigheidsdatum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MessageID"  type="ccma:ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.MessageID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.MessageID</ccts:DictionaryEntryName>
+<ccts:Definition>UUID voor het uniek identificeren van elke business document instantie. De UUID wordt uitgegeven door de infrastructuur.
+Deze identifier is verplicht.</ccts:Definition>
+<ccts:BusinessTermName>Bericht ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProcessTypeID" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.ProcessTypeID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ProcessTypeID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the process type where a document instance belongs to</ccts:Definition>
+<ccts:BusinessTermName>Procestype ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RepeatedRequest" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.RepeatedRequest</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.RepeatedRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Correlates message or service with all other messages and service calls related to the same business process</ccts:Definition>
+<ccts:BusinessTermName>Herhaling aanvraag</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TestRequest" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EDSNBusinessDocumentHeader.TestRequest</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.TestRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Indicates if this is a test request</ccts:Definition>
+<ccts:BusinessTermName>Testdocument</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Destination"  type="ccma:ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Destination</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Manifest" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Source"  type="ccma:ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Source</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Destination</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Receiver"  type="ccma:ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Service" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Service</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Receiver.Authority</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the receiving party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Receiver.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol ontvangende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ReceiverID"  type="ccma:ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Receiver.ReceiverID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ReceiverID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Service</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ServiceMethod" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Service.ServiceMethod</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Identifies a process within the service that processes on the business document</ccts:Definition>
+<ccts:BusinessTermName>Functionaliteit van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ServiceName" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Service.ServiceName</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceName</ccts:DictionaryEntryName>
+<ccts:Definition>Sender description of service to be carried out on the business document</ccts:Definition>
+<ccts:BusinessTermName>Naam van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Manifest ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="NumberofItems"  type="ccma:ChangeOfSupplierResponseEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Manifest.NumberofItems</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest.NumberofItems</ccts:DictionaryEntryName>
+<ccts:Definition>Number of associated items</ccts:Definition>
+<ccts:BusinessTermName>Aantal gerelateerde items</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ManifestItem" minOccurs="1" maxOccurs="unbounded" type="ccma:ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Description" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ManifestItem.Description</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.Description</ccts:DictionaryEntryName>
+<ccts:Definition>Text description of the item</ccts:Definition>
+<ccts:BusinessTermName>Omschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LanguageCode" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ManifestItem.LanguageCode</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.LanguageCode</ccts:DictionaryEntryName>
+<ccts:Definition>ISO 639 language code of the item</ccts:Definition>
+<ccts:BusinessTermName>Taal-code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MimeTypeQualifierCode"  type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ManifestItem.MimeTypeQualifierCode</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.MimeTypeQualifierCode</ccts:DictionaryEntryName>
+<ccts:Definition>MIME Media Types Code describing the content of the item</ccts:Definition>
+<ccts:BusinessTermName>MIME Media Type code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="UniformResourceIdentifier"  type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ManifestItem.UniformResourceIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.UniformResourceIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>URI of the item
+Identifier voor locatie en naam van een attachment</ccts:Definition>
+<ccts:BusinessTermName>URI</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Source ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Source</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Source.Authority</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the sending party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Source.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol zendende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SenderID"  type="ccma:ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Source.SenderID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.SenderID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:choice>
+<xsd:element name="Portaal_MeteringPoint"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Rejection"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Rejection</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek. Portaal_Rejection (Afwijzing) heeft een relatie met MeteringPoint (Aansluiting). Bevat geen informatie over MeteringPoint.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:choice>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:ChangeOfSupplierResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_MeteringPoint.EANID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Uniek identificatienummer conform de Europese Artikel Nummering voor de aansluiting (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProductType"  type="ccma:ChangeOfSupplierResponseEnvelope_EnergyProductPortaalTypeCode" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.ProductType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_MeteringPoint.ProductType</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.ProductType</ccts:DictionaryEntryName>
+<ccts:Definition>Type van de aansluiting: Electriciteit of Gas (EDT).</ccts:Definition>
+<ccts:BusinessTermName>Productsoort</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridOperator_Company"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPCommercialCharacteristics"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Mutation"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_Portaal_Mutation" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_GridOperator_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:ChangeOfSupplierResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#GridOperator_Company.ID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="BalanceSupplier_Company"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceSupplier_Company</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="OldBalanceSupplier_Company" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_OldBalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#OldBalanceSupplier_Company</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>OldBalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Oude leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="BalanceResponsibleParty_Company"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceResponsibleParty_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceResponsibleParty_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceResponsibleParty_Company</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: Degene verantwoordelijk voor het opstellen of te doen opstellen van energieprogramma&apos;s met betrekking tot de productie, het transport en het verbruik van elektriciteit ten behoeve van de netbeheerders en zich met inachtneming van de voorwaarden, bedoeld in artikel 26, te gedragen overeenkomstig die energieprogramma&apos;s.
+Gas: Degene verantwoordelijk voor het opstellen van een programma zoals bedoeld in artikel 17b, eerste of tweede lid, van de Gaswet.</ccts:Definition>
+<ccts:BusinessTermName>Programmaverantwoordelijke</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceResponsibleParty_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceResponsibleParty_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceResponsibleParty_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceResponsibleParty_Company</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: Degene verantwoordelijk voor het opstellen of te doen opstellen van energieprogramma&apos;s met betrekking tot de productie, het transport en het verbruik van elektriciteit ten behoeve van de netbeheerders en zich met inachtneming van de voorwaarden, bedoeld in artikel 26, te gedragen overeenkomstig die energieprogramma&apos;s.
+Gas: Degene verantwoordelijk voor het opstellen van een programma zoals bedoeld in artikel 17b, eerste of tweede lid, van de Gaswet.</ccts:Definition>
+<ccts:BusinessTermName>Programmaverantwoordelijke</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:ChangeOfSupplierResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceResponsibleParty_Company.ID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceSupplier_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceSupplier_Company</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:ChangeOfSupplierResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceSupplier_Company.ID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_OldBalanceSupplier_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_MPCommercialCharacteristics_OldBalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#OldBalanceSupplier_Company</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>OldBalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Oude leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:ChangeOfSupplierResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#OldBalanceSupplier_Company.ID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>OldBalanceSupplier_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_Portaal_Mutation ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_Portaal_Mutation" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ExternalReference" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_ReferenceTextType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.ExternalReference">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation.ExternalReference</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.ExternalReference</ccts:DictionaryEntryName>
+<ccts:Definition>Eigen referentie van de initiërende marktpartij ter vereenvoudiging van zijn eigen interne procesgang. Max. 60 karakters (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Referentie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MutationDate"  type="ccma:ChangeOfSupplierResponseEnvelope_Date" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.MutationDate">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation.MutationDate</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.MutationDate</ccts:DictionaryEntryName>
+<ccts:Definition>De datum waarop de wijziging van de verantwoordelijkheden zal worden geëffectueerd. De wijzigingen worden geëffectueerd om 00:00 uur op mutatiedatum en zijn voor de gehele dag geldig (elektriciteitsdag 00:00 uur / gasdag 06:00 uur) (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Datum mutatie marktproces</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MutationReason"  type="ccma:ChangeOfSupplierResponseEnvelope_MutationReasonPortaalCode" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.MutationReason">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation.MutationReason</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.MutationReason</ccts:DictionaryEntryName>
+<ccts:Definition>Reden van de wijziging (EDT).</ccts:Definition>
+<ccts:BusinessTermName>Procescode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Dossier"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_Portaal_Mutation_Dossier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Dossier</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier</ccts:DictionaryEntryName>
+<ccts:Definition>Dossier met informatie en identifiers van processen en transacties.</ccts:Definition>
+<ccts:BusinessTermName>Dossier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_Portaal_Mutation_Dossier ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_MeteringPoint_Portaal_Mutation_Dossier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Dossier</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier</ccts:DictionaryEntryName>
+<ccts:Definition>Dossier met informatie en identifiers van processen en transacties.</ccts:Definition>
+<ccts:BusinessTermName>Dossier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Dossier.ID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van het dossier (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Dossiernummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Rejection</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek. Portaal_Rejection (Afwijzing) heeft een relatie met MeteringPoint (Aansluiting). Bevat geen informatie over MeteringPoint.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Rejection" minOccurs="1" maxOccurs="unbounded" type="ccma:ChangeOfSupplierResponseEnvelope_RejectionPortaalType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Rejection.Rejection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Rejection.Rejection</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Rejection.Rejection</ccts:DictionaryEntryName>
+<ccts:Definition>Een afwijzing op een vraag of verzoek (CDT).</ccts:Definition>
+<ccts:BusinessTermName>Afwijzing</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_MeteringPoint"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_MeteringPoint1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_MeteringPoint1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:ChangeOfSupplierResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_MeteringPoint1.EANID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Uniek identificatienummer conform de Europese Artikel Nummering voor de aansluiting (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProductType" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_EnergyProductPortaalTypeCode" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.ProductType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_MeteringPoint1.ProductType</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.ProductType</ccts:DictionaryEntryName>
+<ccts:Definition>Type van de aansluiting: Electriciteit of Gas (EDT).</ccts:Definition>
+<ccts:BusinessTermName>Productsoort</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridOperator_Company"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#GridOperator_Company1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPCommercialCharacteristics"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_MPCommercialCharacteristics" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#MPCommercialCharacteristics1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Mutation"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_Portaal_Mutation" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_GridOperator_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#GridOperator_Company1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:ChangeOfSupplierResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#GridOperator_Company1.ID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_MPCommercialCharacteristics ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_MPCommercialCharacteristics" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#MPCommercialCharacteristics1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="BalanceSupplier_Company"  type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceSupplier_Company1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceSupplier_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_MPCommercialCharacteristics_BalanceSupplier_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceSupplier_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceSupplier_Company1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Een organisatorische eenheid die zich bezighoudt met het leveren van elektriciteit en/of gas.</ccts:Definition>
+<ccts:BusinessTermName>Leverancier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:ChangeOfSupplierResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#BalanceSupplier_Company1.ID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceSupplier_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_Portaal_Mutation ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_Portaal_Mutation" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ExternalReference" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_ReferenceTextType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.ExternalReference">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation1.ExternalReference</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.ExternalReference</ccts:DictionaryEntryName>
+<ccts:Definition>Eigen referentie van de initiërende marktpartij ter vereenvoudiging van zijn eigen interne procesgang. Max. 60 karakters (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Referentie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MutationDate"  type="ccma:ChangeOfSupplierResponseEnvelope_Date" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.MutationDate">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation1.MutationDate</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.MutationDate</ccts:DictionaryEntryName>
+<ccts:Definition>De datum waarop de wijziging van de verantwoordelijkheden zal worden geëffectueerd. De wijzigingen worden geëffectueerd om 00:00 uur op mutatiedatum en zijn voor de gehele dag geldig (elektriciteitsdag 00:00 uur / gasdag 06:00 uur) (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Datum mutatie marktproces</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MutationReason"  type="ccma:ChangeOfSupplierResponseEnvelope_MutationReasonPortaalCode" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.MutationReason">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Portaal_Mutation1.MutationReason</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.MutationReason</ccts:DictionaryEntryName>
+<ccts:Definition>Reden van de wijziging (EDT).</ccts:Definition>
+<ccts:BusinessTermName>Procescode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Dossier" minOccurs="0" maxOccurs="1" type="ccma:ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_Portaal_Mutation_Dossier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Dossier1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier</ccts:DictionaryEntryName>
+<ccts:Definition>Dossier met informatie en identifiers van processen en transacties.</ccts:Definition>
+<ccts:BusinessTermName>Dossier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_Portaal_Mutation_Dossier ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_Portaal_Content_Portaal_Rejection_Portaal_MeteringPoint_Portaal_Mutation_Dossier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Dossier1</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier</ccts:DictionaryEntryName>
+<ccts:Definition>Dossier met informatie en identifiers van processen en transacties.</ccts:Definition>
+<ccts:BusinessTermName>Dossier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Dossier1.ID</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van het dossier (LDT).</ccts:Definition>
+<ccts:BusinessTermName>Dossiernummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Business Data Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Date ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_Date">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Date</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Date</ccts:DictionaryEntryName>
+<ccts:Definition>Datum (date).</ccts:Definition>
+<ccts:BusinessTermName>Datum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:date"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: DateTime ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#DateTime</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>DateTime</ccts:DictionaryEntryName>
+<ccts:Definition>Datum/tijd (dateTime).</ccts:Definition>
+<ccts:BusinessTermName>Datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:dateTime"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GLNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#GLNEANCode</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GLNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Location Number (GLN) conform de Europese Artikel Nummering.</ccts:Definition>
+<ccts:BusinessTermName>Global Location Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="13"/>
+<xsd:pattern value="[0-9]{13}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GSRNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#GSRNEANCode</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>GSRNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Service Relation Number (GSRN) conform de Europese Artikel Nummering.</ccts:Definition>
+<ccts:BusinessTermName>Global Service Relation Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="18"/>
+<xsd:pattern value="[0-9]{18}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Identifier ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Identifier</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Identifier</ccts:DictionaryEntryName>
+<ccts:Definition>Identifier (string).</ccts:Definition>
+<ccts:BusinessTermName>Identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Indicator ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Indicator</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Indicator</ccts:DictionaryEntryName>
+<ccts:Definition>Indicator (string).</ccts:Definition>
+<ccts:BusinessTermName>Indicator</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Numeric ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Numeric</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Numeric</ccts:DictionaryEntryName>
+<ccts:Definition>Nummer (getal).</ccts:Definition>
+<ccts:BusinessTermName>Nummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: ReferenceTextType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_ReferenceTextType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#ReferenceTextType</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>ReferenceTextType</ccts:DictionaryEntryName>
+<ccts:Definition>Referentie (string).</ccts:Definition>
+<ccts:BusinessTermName>Referentie tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="60"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: RejectionPortaalType ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="ChangeOfSupplierResponseEnvelope_RejectionPortaalType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#RejectionPortaalType</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType</ccts:DictionaryEntryName>
+<ccts:Definition>Datatype voor inhoudelijke afwijzingen.</ccts:Definition>
+<ccts:BusinessTermName>Afwijzingen portaal</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="RejectionCode"  type="ccma:ChangeOfSupplierResponseEnvelope_RejectionReasonPortaalCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#RejectionPortaalType.RejectionCode</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType.RejectionCode</ccts:DictionaryEntryName>
+<ccts:Definition>Code van de reden van de afwijzing.</ccts:Definition>
+<ccts:BusinessTermName>Code afwijsreden</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RejectionText" minOccurs="0" maxOccurs="1" type="xsd:string">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#RejectionPortaalType.RejectionText</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionPortaalType.RejectionText</ccts:DictionaryEntryName>
+<ccts:Definition>Toelichting op de reden van afwijzing.</ccts:Definition>
+<ccts:BusinessTermName>Toelichting afwijsreden</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Text ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#Text</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>Text</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst (string).</ccts:Definition>
+<ccts:BusinessTermName>Tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Business Code List Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyProductPortaalTypeCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_EnergyProductPortaalTypeCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#EnergyProductPortaalTypeCode</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyProductPortaalTypeCode</ccts:DictionaryEntryName>
+<ccts:Definition>Code producttype Portaal.</ccts:Definition>
+<ccts:BusinessTermName>Code producttype Portaal</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="ELK">
+<xsd:annotation>
+<xsd:documentation>Elektriciteit </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="GAS">
+<xsd:annotation>
+<xsd:documentation>Gas</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MutationReasonPortaalCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_MutationReasonPortaalCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#MutationReasonPortaalCode</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>MutationReasonPortaalCode</ccts:DictionaryEntryName>
+<ccts:Definition>Code mutatiereden / proces identificatie Portaal.</ccts:Definition>
+<ccts:BusinessTermName>Code mutatiereden Portaal</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="BULKPV">
+<xsd:annotation>
+<xsd:documentation>Bulk PV</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CONNACT">
+<xsd:annotation>
+<xsd:documentation>Aansluiting activeren </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CONNCHG">
+<xsd:annotation>
+<xsd:documentation>Aansluitingwijziging </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CONNCRE">
+<xsd:annotation>
+<xsd:documentation>Aansluiting aanmaken </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CONNDACT">
+<xsd:annotation>
+<xsd:documentation>Aansluiting deactiveren </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CONNEND">
+<xsd:annotation>
+<xsd:documentation>Aansluiting verwijderen </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CONNUPD">
+<xsd:annotation>
+<xsd:documentation>Aansluiting wijzigen </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="CONSMTR">
+<xsd:annotation>
+<xsd:documentation>Periodieke meterstand en verbruik</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="DISPUTE">
+<xsd:annotation>
+<xsd:documentation>Dispuut over stand</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="DSTRCONN">
+<xsd:annotation>
+<xsd:documentation>Stamgegevens op aanvraag
+</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="DSTRMSTR">
+<xsd:annotation>
+<xsd:documentation>Stamgegevens distribueren </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="ENDOFMV">
+<xsd:annotation>
+<xsd:documentation>Afmelden MV </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="EOSUPPLY">
+<xsd:annotation>
+<xsd:documentation>Einde levering</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="HISTMTR">
+<xsd:annotation>
+<xsd:documentation>Opvraag historische meetgegevens</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="MOVEIN">
+<xsd:annotation>
+<xsd:documentation>Inhuizing </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="MOVEOUT">
+<xsd:annotation>
+<xsd:documentation>Uithuizing</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="MTREND">
+<xsd:annotation>
+<xsd:documentation>Meter verwijderen </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="MTRINST">
+<xsd:annotation>
+<xsd:documentation>Meter installeren </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="MTRUPD">
+<xsd:annotation>
+<xsd:documentation>Meter wijzigen (metermutatie)</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="NAMECHG">
+<xsd:annotation>
+<xsd:documentation>Naamswijziging </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="NMCRSCMP">
+<xsd:annotation>
+<xsd:documentation>Wijzigen van zowel naam als verblijfsfunctie / complexbepaling</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="PERMTR">
+<xsd:annotation>
+<xsd:documentation>Periodieke meterstand</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="PHYSMTR">
+<xsd:annotation>
+<xsd:documentation>Fysieke opname</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="RESCOMP">
+<xsd:annotation>
+<xsd:documentation>Wijzigen verblijfsfunctie / complexbepaling</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="SWITCHLV">
+<xsd:annotation>
+<xsd:documentation>Leverancierswitch </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="SWITCHMV">
+<xsd:annotation>
+<xsd:documentation>Aanmelden MV </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="SWITCHPV">
+<xsd:annotation>
+<xsd:documentation>PV/Shipper-switch </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="SWTCHUPD">
+<xsd:annotation>
+<xsd:documentation>Switchbaarheid wijzigen </xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: RejectionReasonPortaalCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="ChangeOfSupplierResponseEnvelope_RejectionReasonPortaalCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:changeofsupplierresponse#RejectionReasonPortaalCode</ccts:UniqueID>
+<ccts:VersionID>1.0</ccts:VersionID>
+<ccts:DictionaryEntryName>RejectionReasonPortaalCode</ccts:DictionaryEntryName>
+<ccts:Definition>Code afwijsreden Portaal.</ccts:Definition>
+<ccts:BusinessTermName>Code afwijsreden Portaal</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:enumeration value="200">
+<xsd:annotation>
+<xsd:documentation>Aanvraag/melding onvolledig of syntactisch onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="201">
+<xsd:annotation>
+<xsd:documentation>EAN-code aansluiting onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="202">
+<xsd:annotation>
+<xsd:documentation> EAN-code opvragende partij onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="203">
+<xsd:annotation>
+<xsd:documentation>EAN-code aansluiting onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="204">
+<xsd:annotation>
+<xsd:documentation>EAN-code leverancier onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="205">
+<xsd:annotation>
+<xsd:documentation>EAN-code MV onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="207">
+<xsd:annotation>
+<xsd:documentation>EAN-code PV onbekend</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="208">
+<xsd:annotation>
+<xsd:documentation>Geblokkeerd voor automatische mutaties.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="209">
+<xsd:annotation>
+<xsd:documentation>Geen geldige (combinatie van) zoekcriteria.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="210">
+<xsd:annotation>
+<xsd:documentation>Indientermijn onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="213">
+<xsd:annotation>
+<xsd:documentation>Niet afgeschakeld of geen schakelopdracht &apos;uit&apos; ontvangen.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="214">
+<xsd:annotation>
+<xsd:documentation>Ontvanger onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="215">
+<xsd:annotation>
+<xsd:documentation>Transactiedossier onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="216">
+<xsd:annotation>
+<xsd:documentation>Transactiedossiernummer onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="217">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling bedrag Ex BTW Hoog onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="218">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling BTW bedrag Hoog onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="219">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling bedrag Ex BTW Laag onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="220">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling BTW bedrag Laag onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="221">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling bedrag Ex BTW Nul onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="222">
+<xsd:annotation>
+<xsd:documentation>Totaaltelling BTW bedrag Nul onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="223">
+<xsd:annotation>
+<xsd:documentation>BTW percentage onjuist toegepast.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="224">
+<xsd:annotation>
+<xsd:documentation>Totaal generaal onjuist.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="225">
+<xsd:annotation>
+<xsd:documentation>Onjuiste aanbiedingsdatum.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="226">
+<xsd:annotation>
+<xsd:documentation>Over de betreffende periode en BTW nummer is al een aanvullende afdrachtspecificatie ontvangen.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="227">
+<xsd:annotation>
+<xsd:documentation>Kruisend bericht</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="228">
+<xsd:annotation>
+<xsd:documentation>Transactiesdossierstap onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="229">
+<xsd:annotation>
+<xsd:documentation>Achternaam ontbreekt en geen leverancier in AR op mutatiedatum.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="230">
+<xsd:annotation>
+<xsd:documentation>EAN-code netbeheerder onbekend.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="231">
+<xsd:annotation>
+<xsd:documentation>Vastgestelde meetdata is te oud.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="232">
+<xsd:annotation>
+<xsd:documentation>Oplevering dispuut- of niet-event standen niet mogelijk voor GV.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="233">
+<xsd:annotation>
+<xsd:documentation>Aansluting onbekend in AR.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="234">
+<xsd:annotation>
+<xsd:documentation>Aansluiting niet voorzien van meetinrichting.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="235">
+<xsd:annotation>
+<xsd:documentation>Aantal meterstanden ongelijk aantal actieve telwerken.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="236">
+<xsd:annotation>
+<xsd:documentation>Aantal posities in meterstanden ongelijk aan aantal posities telwerken.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="237">
+<xsd:annotation>
+<xsd:documentation>Leverancier is niet de actuele leverancier.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="238">
+<xsd:annotation>
+<xsd:documentation>Stand ligt voor reeds vastgestelde stand.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="239">
+<xsd:annotation>
+<xsd:documentation>Leverancier is niet de initiator van het event.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="240">
+<xsd:annotation>
+<xsd:documentation>Geen event bekend op opnamedatum.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="241">
+<xsd:annotation>
+<xsd:documentation>Geen historische meetdata beschikbaar.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+<xsd:enumeration value="242">
+<xsd:annotation>
+<xsd:documentation>Opvraag betreft een KV-aansluiting.</xsd:documentation>
+</xsd:annotation>
+</xsd:enumeration>
+</xsd:restriction>
+</xsd:simpleType>
+</xsd:schema>

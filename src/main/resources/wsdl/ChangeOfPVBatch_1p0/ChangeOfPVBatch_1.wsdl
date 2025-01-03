@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== ChangeOfPVBatch Web Service Description File ===== -->
+<!-- ================================================================== -->
+<!--
+   Web service agency: nedu 
+   Web service version: 1.0.0
+   Web service date: 23 May 2012
+
+   Copyright (C) nedu (2012). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ws="urn:nedu:edsn:service:changeofpvbatch:1:standard" targetNamespace="urn:nedu:edsn:service:changeofpvbatch:1:standard" xmlns:ccma1="urn:nedu:edsn:data:changeofpvbatchrequest:1:standard" xmlns:ccma2="urn:nedu:edsn:data:changeofpvbatchresponse:1:standard" xmlns:ccma3="urn:edsn:edsn:data:soapfault:1:standard" >
+<types>
+<xsd:schema>
+<xsd:import schemaLocation="ChangeOfPVBatchRequest_1p0.xsd" namespace="urn:nedu:edsn:data:changeofpvbatchrequest:1:standard" />
+<xsd:import schemaLocation="ChangeOfPVBatchResponse_1p0.xsd" namespace="urn:nedu:edsn:data:changeofpvbatchresponse:1:standard" />
+<xsd:import schemaLocation="SOAPFault_1p0.xsd" namespace="urn:edsn:edsn:data:soapfault:1:standard" />
+</xsd:schema>
+</types>
+<message name="ChangeOfPVBatchRequestEnvelope">
+<part name="part1" element="ccma1:ChangeOfPVBatchRequestEnvelope"/>
+</message>
+<message name="ChangeOfPVBatchResponseEnvelope">
+<part name="part1" element="ccma2:ChangeOfPVBatchResponseEnvelope"/>
+</message>
+<message name="SOAPFault">
+<part name="part1" element="ccma3:SOAPFault"/>
+</message>
+<portType name="ChangeOfPVBatchPortType">
+<operation name="ChangeOfPVBatch">
+<input message="ws:ChangeOfPVBatchRequestEnvelope"/>
+<output message="ws:ChangeOfPVBatchResponseEnvelope"/>
+<fault name="SOAPFault" message="ws:SOAPFault"/>
+</operation>
+</portType>
+<binding name="ChangeOfPVBatchBinding" type="ws:ChangeOfPVBatchPortType">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="ChangeOfPVBatch">
+<soap:operation soapAction="urn:ChangeOfPVBatchRequestEnvelope" style="document"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+<fault name="SOAPFault">
+<soap:fault name="SOAPFault" use="literal"/>
+</fault>
+</operation>
+</binding>
+<service name="ChangeOfPVBatch">
+<port name="ChangeOfPVBatchPort" binding="ws:ChangeOfPVBatchBinding">
+<soap:address location="http://"/>
+</port>
+</service>
+</definitions>

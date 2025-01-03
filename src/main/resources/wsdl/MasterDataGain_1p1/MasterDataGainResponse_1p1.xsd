@@ -1,0 +1,1122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ================================================================== -->
+<!-- ===== MasterDataGainResponseEnvelope XML Schema File ===== -->
+<!-- ================================================================== -->
+<!--
+   Schema agency: nedu 
+   Schema version: 1.1.0
+   Schema date: 31 March 2020
+
+   Copyright (C) nedu (2020). All Rights Reserved.
+
+   This document and the information contained herein is provided on an "AS IS" basis
+   and nedu DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+   LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL NOT INFRINGE
+   ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+   PURPOSE
+-->
+<xsd:schema version="1p1" xmlns:ccma="urn:nedu:edsn:data:masterdatagainresponse:1:standard" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:ccts="urn:un:unece:uncefact:documentation:common:3:standard:CoreComponentsTechnicalSpecification:3" targetNamespace="urn:nedu:edsn:data:masterdatagainresponse:1:standard" elementFormDefault="qualified" attributeFormDefault="unqualified">
+<!-- ================================================================== -->
+<!-- ===== Element Declarations ===== -->
+<!-- ================================================================== -->
+<!-- ===== Root element ===== -->
+<!-- ================================================================== -->
+<xsd:element name="MasterDataGainResponseEnvelope" type="ccma:MasterDataGainResponseEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MasterDataGainResponseEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MasterDataGainResponseEnvelope</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Distribueren stamgegevens bij GAIN antwoord</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<!-- ================================================================== -->
+<!-- ===== Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MasterDataGainResponseEnvelope</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MasterDataGainResponseEnvelope</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Distribueren stamgegevens bij GAIN antwoord</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EDSNBusinessDocumentHeader"  type="ccma:MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Content"  type="ccma:MasterDataGainResponseEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader</ccts:DictionaryEntryName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ContentHash" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.ContentHash</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ContentHash</ccts:DictionaryEntryName>
+<ccts:Definition>Hash calculation based on business document</ccts:Definition>
+<ccts:BusinessTermName>Hash-code berekening</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ConversationID" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.ConversationID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ConversationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify all document instances related to a specific business process resulting from an initial service request</ccts:Definition>
+<ccts:BusinessTermName>Conversatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CorrelationID" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.CorrelationID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CorrelationID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the document instances related to a specific asynchronous process</ccts:Definition>
+<ccts:BusinessTermName>Correlatie ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="CreationTimestamp"  type="ccma:MasterDataGainResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.CreationTimestamp</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.CreationTimestamp</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp when document was created</ccts:Definition>
+<ccts:BusinessTermName>Creatie datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="DocumentID" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.DocumentID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.DocumentID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to uniquely identify the business document on a functional level</ccts:Definition>
+<ccts:BusinessTermName>Document ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ExpiresAt" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.ExpiresAt</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ExpiresAt</ccts:DictionaryEntryName>
+<ccts:Definition>Timestamp indication the expiration of this request</ccts:Definition>
+<ccts:BusinessTermName>Uiterste geldigheidsdatum</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MessageID"  type="ccma:MasterDataGainResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.MessageID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.MessageID</ccts:DictionaryEntryName>
+<ccts:Definition>UUID voor het uniek identificeren van elke business document instantie. De UUID wordt uitgegeven door de infrastructuur.
+Deze identifier is verplicht.</ccts:Definition>
+<ccts:BusinessTermName>Bericht ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProcessTypeID" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.ProcessTypeID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.ProcessTypeID</ccts:DictionaryEntryName>
+<ccts:Definition>This identifier is used to identify the process type where a document instance belongs to</ccts:Definition>
+<ccts:BusinessTermName>Procestype ID</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="RepeatedRequest" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.RepeatedRequest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.RepeatedRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Correlates message or service with all other messages and service calls related to the same business process</ccts:Definition>
+<ccts:BusinessTermName>Herhaling aanvraag</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="TestRequest" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EDSNBusinessDocumentHeader.TestRequest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EDSNBusinessDocumentHeader.TestRequest</ccts:DictionaryEntryName>
+<ccts:Definition>Indicates if this is a test request</ccts:Definition>
+<ccts:BusinessTermName>Testdocument</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Destination"  type="ccma:MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Destination</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Manifest" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Source"  type="ccma:MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Source</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Destination</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Destination</ccts:DictionaryEntryName>
+<ccts:BusinessTermName>Bestemming</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Receiver"  type="ccma:MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Service" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Service</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Receiver">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Receiver</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver</ccts:DictionaryEntryName>
+<ccts:Definition>Ontvanger van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Receiver.Authority</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the receiving party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Receiver.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol ontvangende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ReceiverID"  type="ccma:MasterDataGainResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Receiver.ReceiverID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Receiver.ReceiverID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Destination_Service">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Service</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service</ccts:DictionaryEntryName>
+<ccts:Definition>Service to be consumed</ccts:Definition>
+<ccts:BusinessTermName>Dienst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ServiceMethod" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Service.ServiceMethod</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Identifies a process within the service that processes on the business document</ccts:Definition>
+<ccts:BusinessTermName>Functionaliteit van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ServiceName" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Service.ServiceName</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Service.ServiceName</ccts:DictionaryEntryName>
+<ccts:Definition>Sender description of service to be carried out on the business document</ccts:Definition>
+<ccts:BusinessTermName>Naam van de service</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Manifest ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Manifest">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Manifest</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest</ccts:DictionaryEntryName>
+<ccts:Definition>Aangave van bijlagen en gerelateerde documenten.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="NumberofItems"  type="ccma:MasterDataGainResponseEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Manifest.NumberofItems</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Manifest.NumberofItems</ccts:DictionaryEntryName>
+<ccts:Definition>Number of associated items</ccts:Definition>
+<ccts:BusinessTermName>Aantal gerelateerde items</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ManifestItem" minOccurs="1" maxOccurs="unbounded" type="ccma:MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Manifest_ManifestItem">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#ManifestItem</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem</ccts:DictionaryEntryName>
+<ccts:Definition>Bevat informatie over het gereferenceerde item.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Description" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#ManifestItem.Description</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.Description</ccts:DictionaryEntryName>
+<ccts:Definition>Text description of the item</ccts:Definition>
+<ccts:BusinessTermName>Omschrijving</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="LanguageCode" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#ManifestItem.LanguageCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.LanguageCode</ccts:DictionaryEntryName>
+<ccts:Definition>ISO 639 language code of the item</ccts:Definition>
+<ccts:BusinessTermName>Taal-code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MimeTypeQualifierCode"  type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#ManifestItem.MimeTypeQualifierCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.MimeTypeQualifierCode</ccts:DictionaryEntryName>
+<ccts:Definition>MIME Media Types Code describing the content of the item</ccts:Definition>
+<ccts:BusinessTermName>MIME Media Type code</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="UniformResourceIdentifier"  type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#ManifestItem.UniformResourceIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>ManifestItem.UniformResourceIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>URI of the item
+Identifier voor locatie en naam van een attachment</ccts:Definition>
+<ccts:BusinessTermName>URI</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Source ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_EDSNBusinessDocumentHeader_Source">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Source</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source</ccts:DictionaryEntryName>
+<ccts:Definition>Zender van een bericht.</ccts:Definition>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Authority" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Source.Authority</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.Authority</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor that qualifies the identifier used to identify the sending party</ccts:Definition>
+<ccts:BusinessTermName>Kwalificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ContactTypeIdentifier" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Source.ContactTypeIdentifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.ContactTypeIdentifier</ccts:DictionaryEntryName>
+<ccts:Definition>Role in this business process</ccts:Definition>
+<ccts:BusinessTermName>Rol zendende marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="SenderID"  type="ccma:MasterDataGainResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Source.SenderID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Source.SenderID</ccts:DictionaryEntryName>
+<ccts:Definition>Descriptor with information to identify this party</ccts:Definition>
+<ccts:BusinessTermName>Identificatie marktpartij</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_PC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_PC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Content">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_Content</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Content</ccts:DictionaryEntryName>
+<ccts:Definition>Inhoud van een Portaal-bericht. Is een container-element op het hoogste niveau en wordt in elk bericht toegepast.</ccts:Definition>
+<ccts:BusinessTermName>Inhoud Portaal-bericht</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="Portaal_MeteringPoint" minOccurs="0" maxOccurs="unbounded" type="ccma:MasterDataGainResponseEnvelope_PC_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_PC_PMP ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_PC_PMP" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_MeteringPoint</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint</ccts:DictionaryEntryName>
+<ccts:Definition>Eén of meer verbindingen tussen een net en een onroerende zaak als bedoeld in artikel 16, onderdelen a tot en met d, van de Wet waardering onroerende zaken. 
+Toelichting: Portaal-MeteringPoint bevat alle eigenschappen van een aansluiting die voor Portaal relevant kunnen zijn.</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="EANID"  type="ccma:MasterDataGainResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_MeteringPoint.EANID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.EANID</ccts:DictionaryEntryName>
+<ccts:Definition>Elke aansluiting op het net van de netbeheerder heeft een unieke EAN18 code conform de landelijke richtlijn (LDT1).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Aansluiting EAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridArea" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_GSRNEANCode" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.GridArea">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_MeteringPoint.GridArea</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.GridArea</ccts:DictionaryEntryName>
+<ccts:Definition>Netgebied/GOS (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>Netgebied/GOS</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MarketSegment"  type="ccma:MasterDataGainResponseEnvelope_MarketSegmentType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.MarketSegment">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_MeteringPoint.MarketSegment</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.MarketSegment</ccts:DictionaryEntryName>
+<ccts:Definition>Verbruikssegment: ART, GVB, KVB (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Verbruikssegment</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProductType"  type="ccma:MasterDataGainResponseEnvelope_EnergyProductType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_MeteringPoint.ProductType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_MeteringPoint.ProductType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_MeteringPoint.ProductType</ccts:DictionaryEntryName>
+<ccts:Definition>Type van de aansluiting: Electriciteit of Gas (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Productsoort</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="GridOperator_Company"  type="ccma:MasterDataGainResponseEnvelope_PC_PMP_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPCommercialCharacteristics"  type="ccma:MasterDataGainResponseEnvelope_PC_PMP_MPCC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MPPhysicalCharacteristics"  type="ccma:MasterDataGainResponseEnvelope_PC_PMP_MPPhysicalCharacteristics" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke eigenschappen van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Fysieke eigenschappen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Portaal_Mutation" minOccurs="1" maxOccurs="unbounded" type="ccma:MasterDataGainResponseEnvelope_PC_PMP_PM" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_Mutation</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_PC_PMP_GridOperator_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_PC_PMP_GridOperator_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#GridOperator_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#GridOperator_Company</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: een vennootschap die op grond van artikel 10, 13 of 14 van de Elektriciteitswet is aangewezen voor het beheer van een of meer netten.
+Gas: een vennootschap die op grond van artikel 2 van de Gaswet is aangewezen voor het beheer van een of meer gastransportnetten.</ccts:Definition>
+<ccts:BusinessTermName>Netbeheerder</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:MasterDataGainResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#GridOperator_Company.ID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GridOperator_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_PC_PMP_MPCC ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_PC_PMP_MPCC" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPCommercialCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPCommercialCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPCommercialCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Commerciële kenmerken van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Commerciële kenmerken</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="BalanceResponsibleParty_Company"  type="ccma:MasterDataGainResponseEnvelope_PC_PMP_MPCC_BalanceResponsibleParty_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceResponsibleParty_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#BalanceResponsibleParty_Company</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: Degene verantwoordelijk voor het opstellen of te doen opstellen van energieprogramma&apos;s met betrekking tot de productie, het transport en het verbruik van elektriciteit ten behoeve van de netbeheerders en zich met inachtneming van de voorwaarden, bedoeld in artikel 26, te gedragen overeenkomstig die energieprogramma&apos;s.
+Gas: Degene verantwoordelijk voor het opstellen van een programma zoals bedoeld in artikel 17b, eerste of tweede lid, van de Gaswet.</ccts:Definition>
+<ccts:BusinessTermName>Programmaverantwoordelijke</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_PC_PMP_MPCC_BalanceResponsibleParty_Company ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_PC_PMP_MPCC_BalanceResponsibleParty_Company" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#BalanceResponsibleParty_Company">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#BalanceResponsibleParty_Company</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company</ccts:DictionaryEntryName>
+<ccts:Definition>Elektriciteit: Degene verantwoordelijk voor het opstellen of te doen opstellen van energieprogramma&apos;s met betrekking tot de productie, het transport en het verbruik van elektriciteit ten behoeve van de netbeheerders en zich met inachtneming van de voorwaarden, bedoeld in artikel 26, te gedragen overeenkomstig die energieprogramma&apos;s.
+Gas: Degene verantwoordelijk voor het opstellen van een programma zoals bedoeld in artikel 17b, eerste of tweede lid, van de Gaswet.</ccts:Definition>
+<ccts:BusinessTermName>Programmaverantwoordelijke</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:MasterDataGainResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#BalanceResponsibleParty_Company.ID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>BalanceResponsibleParty_Company.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van de marktpartij (LDT1).</ccts:Definition>
+<ccts:BusinessTermName>MarktpartijEAN</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_PC_PMP_MPPhysicalCharacteristics ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_PC_PMP_MPPhysicalCharacteristics" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke eigenschappen van een aansluiting.</ccts:Definition>
+<ccts:BusinessTermName>Fysieke eigenschappen</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="AllocationMethod"  type="ccma:MasterDataGainResponseEnvelope_EnergyAllocationMethodType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.AllocationMethod">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.AllocationMethod</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.AllocationMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Allocatie methode van de aansluiting (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Allocatiemethode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EnergyDeliveryStatus"  type="ccma:MasterDataGainResponseEnvelope_EnergyDeliveryStatusType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.EnergyDeliveryStatus">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.EnergyDeliveryStatus</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EnergyDeliveryStatus</ccts:DictionaryEntryName>
+<ccts:Definition>Leveringstatus actief of niet actief (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Leveringsstatus</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EnergyFlowDirection" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_EnergyFlowDirectionType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.EnergyFlowDirection">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.EnergyFlowDirection</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EnergyFlowDirection</ccts:DictionaryEntryName>
+<ccts:Definition>Leveringsrichting van de energie (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Leveringsrichting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="MeteringMethod"  type="ccma:MasterDataGainResponseEnvelope_EnergyMeteringMethodType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.MeteringMethod">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.MeteringMethod</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.MeteringMethod</ccts:DictionaryEntryName>
+<ccts:Definition>Meetmethode: maandelijks, jaarlijks, slim, telemetrie etc. (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Wijze van bemeting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="PhysicalStatus"  type="ccma:MasterDataGainResponseEnvelope_EnergyConnectionPhysicalStatusType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.PhysicalStatus">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.PhysicalStatus</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.PhysicalStatus</ccts:DictionaryEntryName>
+<ccts:Definition>Fysieke status van de aansluiting: In aanleg, in bedrijf, etc. (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Fysieke status</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="ProfileCategory" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_EnergyUsageProfileType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#MPPhysicalCharacteristics.ProfileCategory">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.ProfileCategory</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.ProfileCategory</ccts:DictionaryEntryName>
+<ccts:Definition>Eén van de categorieën volgens paragraaf 2 van bijlage 15 van de Meetcode, waarbij netaansluitingen gecategoriseerd worden op basis van objectief vast te stellen kenmerken, zoals tariefcategorie, aansluitwaarde, gecontracteerd transportvermogen en bedrijfstijd en waarbij voor elk van deze categorieën een eigen, voor de desbetreffende categorie kenmerkende reeks profielfracties wordt vastgesteld (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Profielcategorie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EAEnergyConsumptionNettedOffPeak" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.EAEnergyConsumptionNettedOffPeak</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EAEnergyConsumptionNettedOffPeak</ccts:DictionaryEntryName>
+<ccts:Definition>De verwachte afname elektriciteit van een allocatiepunt van het net (laag tarief) bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJA Laag Tarief) (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>SJA laag tarief</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EAEnergyConsumptionNettedPeak" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.EAEnergyConsumptionNettedPeak</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EAEnergyConsumptionNettedPeak</ccts:DictionaryEntryName>
+<ccts:Definition>De verwachte afname elektriciteit van een allocatiepunt van het net (normaal tarief) bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJA Normaal Tarief), of het verwachte jaarverbruik gas bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJV) (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>SJA normaal tarief/SJV</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EAEnergyProductionNettedOffPeak" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.EAEnergyProductionNettedOffPeak</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EAEnergyProductionNettedOffPeak</ccts:DictionaryEntryName>
+<ccts:Definition>De verwachte invoeding elektriciteit van een allocatiepunt op het net (laag tarief) bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJI Laag tarief) (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>SJI laag tarief</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="EAEnergyProductionNettedPeak" minOccurs="0" maxOccurs="1" type="ccma:MasterDataGainResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MPPhysicalCharacteristics.EAEnergyProductionNettedPeak</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MPPhysicalCharacteristics.EAEnergyProductionNettedPeak</ccts:DictionaryEntryName>
+<ccts:Definition>De verwachte invoeding elektriciteit van een allocatiepunt op het net (normaal tarief) bij gestandaardiseerde condities en op basis van een genormaliseerd jaar (SJI Normaal tarief) (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>SJI normaal tarief</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_PC_PMP_PM ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_PC_PMP_PM" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_Mutation</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation</ccts:DictionaryEntryName>
+<ccts:Definition>Wijziging in een bestaande situatie. </ccts:Definition>
+<ccts:BusinessTermName>Mutatie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="MutationReason"  type="ccma:MasterDataGainResponseEnvelope_MutationReasonType" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Portaal_Mutation.MutationReason">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Portaal_Mutation.MutationReason</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Portaal_Mutation.MutationReason</ccts:DictionaryEntryName>
+<ccts:Definition>Code mutatiereden (LDT2).(PG)</ccts:Definition>
+<ccts:BusinessTermName>Procescode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+<xsd:element name="Dossier"  type="ccma:MasterDataGainResponseEnvelope_PC_PMP_PM_Dossier" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Dossier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Dossier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier</ccts:DictionaryEntryName>
+<ccts:Definition>Dossier met informatie en identifiers van processen en transacties.</ccts:Definition>
+<ccts:BusinessTermName>Dossier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MasterDataGainResponseEnvelope_PC_PMP_PM_Dossier ===== -->
+<!-- ================================================================== -->
+<xsd:complexType name="MasterDataGainResponseEnvelope_PC_PMP_PM_Dossier" sawsdl:modelReference="urn:nedu:edsn:lom:portaal:model:1:standard#Dossier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Dossier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier</ccts:DictionaryEntryName>
+<ccts:Definition>Dossier met informatie en identifiers van processen en transacties.</ccts:Definition>
+<ccts:BusinessTermName>Dossier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:sequence>
+<xsd:element name="ID"  type="ccma:MasterDataGainResponseEnvelope_TransactionDossierIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Dossier.ID</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Dossier.ID</ccts:DictionaryEntryName>
+<ccts:Definition>Unieke identificatie van het dossier. Max. 11 karakters (LDT2).</ccts:Definition>
+<ccts:BusinessTermName>Dossiernummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+</xsd:element>
+</xsd:sequence>
+</xsd:complexType>
+<!-- ================================================================== -->
+<!-- ===== Business Data Type Definitions ===== -->
+<!-- ================================================================== -->
+<!-- ================================================================== -->
+<!-- ===== Type Definition: DateTime ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_DateTime">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#DateTime</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>DateTime</ccts:DictionaryEntryName>
+<ccts:Definition>Datum/tijd (dateTime) (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Datum/tijd</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:dateTime"/>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyAllocationMethodType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_EnergyAllocationMethodType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EnergyAllocationMethodType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyAllocationMethodType</ccts:DictionaryEntryName>
+<ccts:Definition>Code allocatiemethode (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code allocatiemethode</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyAmountType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_EnergyAmountType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EnergyAmountType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyAmountType</ccts:DictionaryEntryName>
+<ccts:Definition>Energie verbruik (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Energie verbruik</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:integer">
+<xsd:maxInclusive value="999999999999999"/>
+<xsd:minInclusive value="0"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyConnectionPhysicalStatusType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_EnergyConnectionPhysicalStatusType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EnergyConnectionPhysicalStatusType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyConnectionPhysicalStatusType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals ge&amp;#239;dentificeerd door de participerende NB&apos;s. Indien geen waarde is opgegeven door de NB wordt default automatisch &apos;In aanleg&apos; gebruikt (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code fysieke status</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyDeliveryStatusType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_EnergyDeliveryStatusType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EnergyDeliveryStatusType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyDeliveryStatusType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals gedentificeerd door de participerende NB&apos;s. Indien geen fysieke status is opgegeven door de NB wordt default automatisch &apos;Inactief&apos; gebruikt (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code leveringstatus</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyFlowDirectionType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_EnergyFlowDirectionType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EnergyFlowDirectionType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyFlowDirectionType</ccts:DictionaryEntryName>
+<ccts:Definition>Combinatie indien op de aansluiting naast consumptie (afname uit het net) tevens productie (invoeding op het net) optreedt. Indien geen waarde is opgegeven door de NB wordt default automatisch &lt;i&gt;Levering&lt;/i&gt; gebruikt. Toegestane waarden: LVR, TLV, CMB. Meetrichting per telwerk. Toegestane waarden: LVR, TLV (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code leveringsrichting</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyMeteringMethodType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_EnergyMeteringMethodType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EnergyMeteringMethodType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyMeteringMethodType</ccts:DictionaryEntryName>
+<ccts:Definition>Frequentie van bemeting. Geen default: waarde moet expliciet opgegeven worden door de NB (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code wijze van bemeten</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyProductType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_EnergyProductType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EnergyProductType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyProductType</ccts:DictionaryEntryName>
+<ccts:Definition>Code productsoort (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code productsoort</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: EnergyUsageProfileType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_EnergyUsageProfileType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#EnergyUsageProfileType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>EnergyUsageProfileType</ccts:DictionaryEntryName>
+<ccts:Definition>Waarden zoals momenteel in gebruik door het switchsysteem (uitwisseling van stamgegevens). Geen default: waarde moet expliciet opgegeven worden door de NB (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code profielcategorie</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GLNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_GLNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#GLNEANCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GLNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Location Number (GLN) conform de Europese Artikel Nummering (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Global Location Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="13"/>
+<xsd:pattern value="[0-9]{13}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: GSRNEANCode ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_GSRNEANCode">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#GSRNEANCode</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>GSRNEANCode</ccts:DictionaryEntryName>
+<ccts:Definition>Global Service Relation Number (GSRN) conform de Europese Artikel Nummering (LDT categorie-1).</ccts:Definition>
+<ccts:BusinessTermName>Global Service Relation Number</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="18"/>
+<xsd:pattern value="[0-9]{18}"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Identifier ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_Identifier">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Identifier</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Identifier</ccts:DictionaryEntryName>
+<ccts:Definition>Identifier (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Indicator ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_Indicator">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Indicator</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Indicator</ccts:DictionaryEntryName>
+<ccts:Definition>Indicator (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Indicator</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MarketSegmentType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_MarketSegmentType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MarketSegmentType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MarketSegmentType</ccts:DictionaryEntryName>
+<ccts:Definition>De bestaande verbruiksegmenten in de (vrije) energiemarkt. Geen default: waarde moet expliciet opgegeven worden door de NB (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code verbruikssegment</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:length value="3"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: MutationReasonType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_MutationReasonType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#MutationReasonType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>MutationReasonType</ccts:DictionaryEntryName>
+<ccts:Definition>Code mutatiereden (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Code mutatiereden</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="15"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Numeric ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_Numeric">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Numeric</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Numeric</ccts:DictionaryEntryName>
+<ccts:Definition>Nummer (getal) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Nummer</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:decimal">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: Text ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_Text">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#Text</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>Text</ccts:DictionaryEntryName>
+<ccts:Definition>Tekst (string) (LDT categorie-3).</ccts:Definition>
+<ccts:BusinessTermName>Tekst</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Type Definition: TransactionDossierIDType ===== -->
+<!-- ================================================================== -->
+<xsd:simpleType name="MasterDataGainResponseEnvelope_TransactionDossierIDType">
+<xsd:annotation>
+<xsd:documentation><ccts:UniqueID>urn:nedu:edsn:data:masterdatagainresponse#TransactionDossierIDType</ccts:UniqueID>
+<ccts:VersionID>1.1</ccts:VersionID>
+<ccts:DictionaryEntryName>TransactionDossierIDType</ccts:DictionaryEntryName>
+<ccts:Definition>Dossier identifier (LDT categorie-2).</ccts:Definition>
+<ccts:BusinessTermName>Dossier identifier</ccts:BusinessTermName>
+</xsd:documentation>
+</xsd:annotation>
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="11"/>
+<xsd:minLength value="1"/>
+</xsd:restriction>
+</xsd:simpleType>
+<!-- ================================================================== -->
+<!-- ===== Business Code List Definitions ===== -->
+<!-- ================================================================== -->
+</xsd:schema>
